@@ -17,16 +17,6 @@ public class Programmer {
         this.company = company;
     }
 
-
-    void work() {
-        String[] positionArr = new String[]{"intern", "junior", "middle", "senior", "lead"};
-        if (positionCount >= positionArr.length) position = positionArr[positionArr.length - 1];
-        else {
-            position = positionArr[positionCount];
-            positionCount++;
-        }
-    }
-
     public String getPosition() {
         return position;
     }
