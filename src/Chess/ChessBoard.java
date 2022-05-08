@@ -14,27 +14,38 @@ public class ChessBoard {
     }
 
     public boolean moveToPosition(int startLine, int startColumn, int endLine, int endColumn) {
-        if (checkPos(startLine) && checkPos(startColumn)) {
+        if (onBoard(startLine, startColumn, endLine, endColumn)) {
 
             if (!nowPlayer.equals(board[startLine][startColumn].getColor())) return false;
 
             if (board[startLine][startColumn].canMoveToPosition(this, startLine, startColumn, endLine, endColumn)) {
 
-                if (board[startLine][startColumn].getSymbol() == 'K' ||  // check position for castling
-                        board[startLine][startColumn].getSymbol() == 'R') {
-                    board[startLine][startColumn].check = false;
+                if (board[startLine][startColumn].getSymbol() == '\u265F' && endLine == 7) {
+                    board[endLine][endColumn] = ChessPiece.choicePiece("White");
+                    board[endLine][endColumn].check = false;
+                    board[startLine][startColumn] = null;
+                } else if (board[startLine][startColumn].getSymbol() == '\u2659' && endLine == 0) {
+                    board[endLine][endColumn] = ChessPiece.choicePiece("Black");
+                    board[endLine][endColumn].check = false;
+                    board[startLine][startColumn] = null;
+                } else if ((board[startLine][startColumn].getSymbol() == '\u265A' || board[startLine][startColumn].getSymbol() == '\u2654')
+                        && endColumn == 2) {
+                    castling0();
+                } else if ((board[startLine][startColumn].getSymbol() == '\u265A' || board[startLine][startColumn].getSymbol() == '\u2654')
+                        && endColumn == 6 ) {
+                    castling7();
+                } else {
+                    board[endLine][endColumn] = board[startLine][startColumn];
+                    board[endLine][endColumn].check = false;// if piece can move, we moved a piece
+                    board[startLine][startColumn] = null; // set null to previous cell
                 }
-
-                board[endLine][endColumn] = board[startLine][startColumn]; // if piece can move, we moved a piece
-                board[startLine][startColumn] = null; // set null to previous cell
                 this.nowPlayer = this.nowPlayerColor().equals("White") ? "Black" : "White";
-
                 return true;
             } else return false;
         } else return false;
     }
 
-    public void printBoard() {  //print board in console
+    public void printBoard() {
         System.out.println("Turn " + nowPlayer);
         System.out.println();
         System.out.println("Player 2(Black)");
@@ -59,9 +70,9 @@ public class ChessBoard {
         return pos >= 0 && pos <= 7;
     }
 
-    // проверка выхода за пределы поля
-    boolean onBoard(ChessBoard board, int line, int column, int toLine, int toColumn) {
-        return (board.checkPos(line) && board.checkPos(column) && board.checkPos(toLine) && board.checkPos(toColumn));
+    // проверка выхода за пределы доски
+    boolean onBoard(int line, int column, int toLine, int toColumn) {
+        return (checkPos(line) && checkPos(column) && checkPos(toLine) && checkPos(toColumn));
     }
 
     boolean castling0() {

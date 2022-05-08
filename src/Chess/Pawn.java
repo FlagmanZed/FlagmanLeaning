@@ -13,21 +13,19 @@ class Pawn extends ChessPiece {
 
     @Override
     public boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn) {
-        if (chessBoard.onBoard(chessBoard, line, column, toLine, toColumn)) {
-            if (line != toLine && column == toColumn) {
-                if (line == 1 && color.equals("White") && line + 2 == toLine)
-                    return onLinePiece(chessBoard, line, column, toLine, toColumn);
-                else if (line == 6 && color.equals("Black") && line - 2 == toLine)
-                    return onLinePiece(chessBoard, line, column, toLine, toColumn);
-                else if (color.equals("White") && line + 1 == toLine)
-                    return onLinePiece(chessBoard, line, column, toLine, toColumn);
-                else if (color.equals("Black") && line - 1 == toLine)
-                    return onLinePiece(chessBoard, line, column, toLine, toColumn);
-                else return false;
-            } else if (Math.abs(line - toLine) == 1 && Math.abs(column - toColumn) == 1)
-                return onDiagonalPiece(chessBoard, line, column, toLine, toColumn);
+        if (line != toLine && column == toColumn) {
+            if (line == 1 && color.equals("White") && line + 2 == toLine)
+                return onColumnPiece(chessBoard, line, column, toLine, toColumn);
+            else if (line == 6 && color.equals("Black") && line - 2 == toLine)
+                return onColumnPiece(chessBoard, line, column, toLine, toColumn);
+            else if (color.equals("White") && line + 1 == toLine)
+                return onColumnPiece(chessBoard, line, column, toLine, toColumn);
+            else if (color.equals("Black") && line - 1 == toLine)
+                return onColumnPiece(chessBoard, line, column, toLine, toColumn);
             else return false;
-        } else return false;
+        } else if (Math.abs(line - toLine) == 1 && Math.abs(column - toColumn) == 1)
+            return onDiagonalPiece(chessBoard, line, column, toLine, toColumn);
+        else return false;
     }
 
     @Override

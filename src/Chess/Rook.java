@@ -13,11 +13,9 @@ class Rook extends ChessPiece {
 
     @Override
     public boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn) {
-        if (chessBoard.onBoard(chessBoard, line, column, toLine, toColumn)) {
-            if (line != toLine && column == toColumn) return onLinePiece(chessBoard, line, column, toLine, toColumn);
-            else if (line == toLine && column != toColumn) return onColumnPiece(chessBoard, line, column, toLine, toColumn);
-            else return false;
-        } else return false;
+        if (line != toLine && column == toColumn) return onColumnPiece(chessBoard, line, column, toLine, toColumn);
+        else if (line == toLine && column != toColumn) return onLinePiece(chessBoard, line, column, toLine, toColumn);
+        else return false;
     }
 
     @Override

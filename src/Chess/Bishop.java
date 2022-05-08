@@ -13,8 +13,7 @@ class Bishop extends ChessPiece {
 
     @Override
     public boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn) {
-        if (chessBoard.onBoard(chessBoard, line, column, toLine, toColumn) && (line != toLine && column != toColumn)
-                && (Math.abs(line - toLine) == Math.abs(column - toColumn))) {
+        if ((line != toLine && column != toColumn) && (Math.abs(line - toLine) == Math.abs(column - toColumn))) {
             return onDiagonalPiece(chessBoard, line, column, toLine, toColumn);
         } else return false;
     }
