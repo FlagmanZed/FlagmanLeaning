@@ -23,9 +23,13 @@ class Pawn extends ChessPiece {
             else if (color.equals("Black") && line - 1 == toLine)
                 return onColumnPiece(chessBoard, line, column, toLine, toColumn);
             else return false;
-        } else if (Math.abs(line - toLine) == 1 && Math.abs(column - toColumn) == 1)
-            return onDiagonalPiece(chessBoard, line, column, toLine, toColumn);
-        else return false;
+        } else {
+            if (color.equals("White") && line - toLine == -1 && Math.abs(column - toColumn) == 1)
+                return onDiagonalPiece(chessBoard, line, column, toLine, toColumn);
+            else if (color.equals("Black") && line - toLine == 1 && Math.abs(column - toColumn) == 1)
+                return onDiagonalPiece(chessBoard, line, column, toLine, toColumn);
+            else return false;
+        }
     }
 
     @Override

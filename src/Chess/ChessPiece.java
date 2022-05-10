@@ -17,7 +17,7 @@ public abstract class ChessPiece {
 
     public abstract boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn);
 
-    // проверка поля на наличие своей фигуры
+    // проверка поля на наличие фигуры противника
     protected boolean onPiece(ChessBoard board, int toLine, int toColumn) {
         if (board.board[toLine][toColumn] != null) return !board.board[toLine][toColumn].getColor().equals(color);
         else return true;
@@ -25,57 +25,75 @@ public abstract class ChessPiece {
 
     // проверка диагонали на наличие фигур
     protected boolean onDiagonalPiece(ChessBoard board, int line, int column, int toLine, int toColumn) {
-        int countDiagPiece = 0;
+        int countOnDiagPiece = 0, lastPieceDiag = 0;
         for (int i = 1; i <= Math.abs(line - toLine); i++) {
-            if (line > toLine && column > toColumn && board.board[line - i][column - i] != null)
-                countDiagPiece++;
-            else if (line < toLine && column > toColumn && board.board[line + i][column - i] != null)
-                countDiagPiece++;
-            else if (line < toLine && column < toColumn && board.board[line + i][column + i] != null)
-                countDiagPiece++;
-            else if (line > toLine && column < toColumn && board.board[line - i][column + i] != null)
-                countDiagPiece++;
+            if (line > toLine && column > toColumn && board.board[line - i][column - i] != null) {
+                countOnDiagPiece++;
+                lastPieceDiag = i;
+            } else if (line < toLine && column > toColumn && board.board[line + i][column - i] != null) {
+                countOnDiagPiece++;
+                lastPieceDiag = i;
+            } else if (line < toLine && column < toColumn && board.board[line + i][column + i] != null) {
+                countOnDiagPiece++;
+                lastPieceDiag = i;
+            } else if (line > toLine && column < toColumn && board.board[line - i][column + i] != null) {
+                countOnDiagPiece++;
+                lastPieceDiag = i;
+            }
         }
-        if (countDiagPiece > Math.abs(line - toLine)) return true;
-        else if (countDiagPiece == 0 && (getSymbol() == '\u265F' || getSymbol() == '\u2659'))                            //исключение для пешки
-            return false;
-        else if (countDiagPiece == 0) return true;
-        else return countDiagPiece == 1 && onPiece(board, toLine, toColumn);
+        if (countOnDiagPiece > 1) return false;
+        if (countOnDiagPiece == 1) {
+            if (lastPieceDiag != Math.abs(line - toLine)) return false;
+            else return onPiece(board, toLine, toColumn);
+        } else {
+            if (getSymbol() == '\u265F' || getSymbol() == '\u2659') return false;
+            else return true;
+        }
     }
 
     // проверка столбца на наличие фигур
     protected boolean onColumnPiece(ChessBoard board, int line, int column, int toLine, int toColumn) {
-        int countColumnPiece = 0;
+        int countOnColumnPiece = 0, lastPieceLine = 0;
         for (int i = 1; i <= Math.abs(line - toLine); i++) {
-            if (line > toLine && board.board[line - i][column] != null)
-                countColumnPiece++;
-            else if (line < toLine && board.board[line + i][column] != null)
-                countColumnPiece++;
+            if (line > toLine && board.board[line - i][column] != null) {
+                countOnColumnPiece++;
+                lastPieceLine = i;
+            } else if (line < toLine && board.board[line + i][column] != null) {
+                countOnColumnPiece++;
+                lastPieceLine = i;
+            }
         }
-        if (countColumnPiece > Math.abs(line - toLine)) return true;
-        else if (countColumnPiece == 0) return true;
-        else if (countColumnPiece == Math.abs(line - toLine) && (getSymbol() == '\u265F' || getSymbol() == '\u2659'))
-            return false;
-        else return countColumnPiece == 1 && onPiece(board, toLine, toColumn);
+        if (countOnColumnPiece > 1) return false;
+
+        if (countOnColumnPiece == 1) {
+            if (getSymbol() == '\u265F' || getSymbol() == '\u2659') return false;
+            else {
+                if (lastPieceLine != Math.abs(line - toLine)) return false;
+                else return onPiece(board, toLine, toColumn);
+            }
+        } else return true;
     }
 
     // проверка линии на наличие фигур
     protected boolean onLinePiece(ChessBoard board, int line, int column, int toLine, int toColumn) {
-        int countLinePiece = 0;
+        int countOnLinePiece = 0, lastPieceColumn = 0;
         for (int i = 1; i <= Math.abs(column - toColumn); i++) {
-            if (column > toColumn && board.board[line][column - i] != null)
-                countLinePiece++;
-            else if (column < toColumn && board.board[line][column + i] != null)
-                countLinePiece++;
+            if (column > toColumn && board.board[line][column - i] != null) {
+                countOnLinePiece++;
+                lastPieceColumn = i;
+            } else if (column < toColumn && board.board[line][column + i] != null) {
+                countOnLinePiece++;
+                lastPieceColumn = i;
+            }
         }
-        if (countLinePiece > Math.abs(column - toColumn)) return true;
-        else if (countLinePiece == 0 && board.board[line][column].check && Math.abs(column - toColumn) == 2
-                && (getSymbol() == '\u265A' || getSymbol() == '\u2654'))
-            return true;
-        else if (countLinePiece == 0) return true;
-        else return countLinePiece == 1 && onPiece(board, toLine, toColumn);
+        if (countOnLinePiece > 1) return false;
+        if (countOnLinePiece == 1) {
+            if (lastPieceColumn != Math.abs(column - toColumn)) return false;
+            else return onPiece(board, toLine, toColumn);
+        } else return true;
     }
 
+    // превращение пешки в выбранную фигуру
     public static ChessPiece choicePiece(String color) {
         ChessPiece piece;
         Scanner scan = new Scanner(System.in);
