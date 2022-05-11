@@ -188,7 +188,7 @@ public class ChessBoard {
                 this.nowPlayer = this.nowPlayerColor().equals("White") ? "Black" : "White";
                 return true;
             } else {
-                System.out.println("Так ходить нельзя, король под ударом!");
+                System.out.print("Король под ударом! ");
                 for (int i = 0; i < 8; i++) {
                     System.arraycopy(copy[i], 0, board[i], 0, 8);
                 }

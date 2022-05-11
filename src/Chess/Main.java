@@ -16,24 +16,24 @@ public class Main {
         board.board[0][4] = new King("White");
         board.board[0][5] = new Bishop("White");
         board.board[0][6] = new Horse("White");
-        board.board[6][7] = new Rook("White");
-//        board.board[1][0] = new Pawn("White");
-//        board.board[1][1] = new Pawn("White");
-//        board.board[1][2] = new Pawn("White");
-//        board.board[1][3] = new Pawn("White");
-//        board.board[1][4] = new Pawn("White");
-//        board.board[1][5] = new Pawn("White");
-//        board.board[1][6] = new Pawn("White");
-//        board.board[1][7] = new Pawn("White");
+        board.board[0][7] = new Rook("White");
+        board.board[6][0] = new Pawn("White");
+        board.board[1][1] = new Pawn("White");
+        board.board[1][2] = new Pawn("White");
+        board.board[1][3] = new Pawn("White");
+        board.board[1][4] = new Pawn("White");
+        board.board[1][5] = new Pawn("White");
+        board.board[1][6] = new Pawn("White");
+        board.board[1][7] = new Pawn("White");
 
-        board.board[7][0] = new Rook("Black");
+//        board.board[7][0] = new Rook("Black");
         board.board[7][1] = new Horse("Black");
         board.board[7][2] = new Bishop("Black");
         board.board[7][3] = new Queen("Black");
         board.board[7][4] = new King("Black");
         board.board[7][5] = new Bishop("Black");
         board.board[7][6] = new Horse("Black");
-        board.board[7][7] = new Rook("Black");
+//        board.board[7][7] = new Rook("Black");
 //        board.board[6][0] = new Pawn("Black");
 //        board.board[6][1] = new Pawn("Black");
 //        board.board[6][2] = new Pawn("Black");
@@ -67,6 +67,7 @@ public class Main {
                 else board = buildBoard();
                 board.printBoard();
             } else {
+                if (board.isCheck()) System.out.println("Объявлен Шах!");
                 s = scanner.nextLine();
                 if (s.equals("exit")) break;
                 else if (s.equals("replay")) {
@@ -98,7 +99,8 @@ public class Main {
                             if (board.canMoveIsCheck(line, column, toLine, toColumn)) {
                                 System.out.println("Успешно передвинулись");
                                 board.printBoard();
-                            } else System.out.println("Передвижение не удалось");
+                            } //else if (board.isCheck()) System.out.println("Шах!");
+                                else System.out.println("Передвижение не удалось");
                         } catch (Exception e) {
                             System.out.println("Вы что-то ввели не так, попробуйте ещё раз");
                         }

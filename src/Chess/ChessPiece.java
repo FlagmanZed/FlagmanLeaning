@@ -97,7 +97,7 @@ public abstract class ChessPiece {
     public static ChessPiece choicePiece(String color) {
         ChessPiece piece;
         Scanner scan = new Scanner(System.in);
-        System.out.println("Выберите фигуру: 1. Ферзь\t2. Ладья\t3. Слон\t4. Конь\t");
+        System.out.println("Выберите фигуру: 1.Ферзь  2.Ладья  3.Слон  4.Конь");
         char choice = scan.next().charAt(0);
         switch (choice) {
             case '1' -> piece = new Queen(color);
