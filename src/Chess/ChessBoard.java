@@ -178,7 +178,7 @@ public class ChessBoard {
         return new King(nowPlayer).isUnderAttack(this, lineKing, columnKing);
     }
 
-    // проверка возможности хода при объявленном шахе
+    // проверка возможности хода при объявленном шахе и его реализация
     boolean canMoveIsCheck(int startLine, int startColumn, int endLine, int endColumn) {
         for (int i = 0; i < 8; i++) {
             System.arraycopy(board[i], 0, copy[i], 0, 8);
@@ -198,7 +198,7 @@ public class ChessBoard {
     }
 
     // проверка количества возможных вариантов вывести короля из под боя
-    void mate() {
+    boolean isMate() {
         countMoveIsCheck = 0;
         for (int a = 0; a < 8; a++) {
             System.arraycopy(board[a], 0, copy[a], 0, 8);
@@ -221,11 +221,12 @@ public class ChessBoard {
             }
         }
 //        System.out.println(countMoveIsCheck);                                                                          // вывести на экран количество возможных ходов
+        return countMoveIsCheck == 0;
     }
 
-    // проверка объявления мата
-    boolean isMate() {
-        mate();
-        return countMoveIsCheck == 0;
+    // проверка мата
+    void mate() {
+        isMate();
+        System.out.println(countMoveIsCheck);
     }
 }

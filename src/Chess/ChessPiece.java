@@ -94,16 +94,20 @@ public abstract class ChessPiece {
     }
 
     // превращение пешки в выбранную фигуру
-    public static ChessPiece choicePiece(String color) {
+    protected static ChessPiece choicePiece(String color) {
         ChessPiece piece;
         Scanner scan = new Scanner(System.in);
-        System.out.println("Выберите фигуру: 1.Ферзь  2.Ладья  3.Слон  4.Конь");
+        System.out.println("""
+                Выберите фигуру:
+                '1'                     - Ладья
+                '2'                     - Слон
+                '3'                     - Конь
+                'любой другой символ'   - Ферзь""");
         char choice = scan.next().charAt(0);
         switch (choice) {
-            case '1' -> piece = new Queen(color);
-            case '2' -> piece = new Rook(color);
-            case '3' -> piece = new Bishop(color);
-            case '4' -> piece = new Horse(color);
+            case '1' -> piece = new Rook(color);
+            case '2' -> piece = new Bishop(color);
+            case '3' -> piece = new Horse(color);
             default -> piece = new Queen(color);
         }
         return piece;

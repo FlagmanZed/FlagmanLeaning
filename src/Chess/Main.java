@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static ChessBoard copy;
-
     public static ChessBoard buildBoard() {
         ChessBoard board = new ChessBoard("White");
 
@@ -17,7 +15,7 @@ public class Main {
         board.board[0][5] = new Bishop("White");
         board.board[0][6] = new Horse("White");
         board.board[0][7] = new Rook("White");
-        board.board[6][0] = new Pawn("White");
+        board.board[1][0] = new Pawn("White");
         board.board[1][1] = new Pawn("White");
         board.board[1][2] = new Pawn("White");
         board.board[1][3] = new Pawn("White");
@@ -26,22 +24,22 @@ public class Main {
         board.board[1][6] = new Pawn("White");
         board.board[1][7] = new Pawn("White");
 
-//        board.board[7][0] = new Rook("Black");
+        board.board[7][0] = new Rook("Black");
         board.board[7][1] = new Horse("Black");
         board.board[7][2] = new Bishop("Black");
         board.board[7][3] = new Queen("Black");
         board.board[7][4] = new King("Black");
         board.board[7][5] = new Bishop("Black");
         board.board[7][6] = new Horse("Black");
-//        board.board[7][7] = new Rook("Black");
-//        board.board[6][0] = new Pawn("Black");
-//        board.board[6][1] = new Pawn("Black");
-//        board.board[6][2] = new Pawn("Black");
-//        board.board[6][3] = new Pawn("Black");
-//        board.board[6][4] = new Pawn("Black");
-//        board.board[6][5] = new Pawn("Black");
-//        board.board[6][6] = new Pawn("Black");
-//        board.board[6][7] = new Pawn("Black");
+        board.board[7][7] = new Rook("Black");
+        board.board[6][0] = new Pawn("Black");
+        board.board[6][1] = new Pawn("Black");
+        board.board[6][2] = new Pawn("Black");
+        board.board[6][3] = new Pawn("Black");
+        board.board[6][4] = new Pawn("Black");
+        board.board[6][5] = new Pawn("Black");
+        board.board[6][6] = new Pawn("Black");
+        board.board[6][7] = new Pawn("Black");
         return board;
     }
 
@@ -51,17 +49,23 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
                 Команды управления игрой:
-                'exit' - выход из игры
-                'replay' - перезапуск игры
+                'exit'                      - выход из игры
+                'replay'                    - перезапуск игры
                 'castling0' или 'castling7' - рокировка к соответствующему столбцу
-                'move 1 1 2 3' - движение фигур с позиции 1 1 на 2 3
-                Проверьте могут ли фигуры ходить друг сквозь друга, корректно ли съедают друг друга, можно ли поставить шах и сделать рокировку?""");
+                'move 1 1 2 3'              - движение фигур с позиции 1 1 на 2 3
+                'check'                     - количество возможных ходов""");
         System.out.println();
         board.printBoard();
         while (true) {
-            String s = "";
-            if (board.isMate()) {
+            String s;
+            if (board.isMate() && board.isCheck()) {
                 System.out.println("Объявлен мат! Запустить игру еще раз? (y/n)");
+                s = scanner.nextLine().toLowerCase();
+                if (s.equals("n")) break;
+                else board = buildBoard();
+                board.printBoard();
+            } else if (board.isMate() && !board.isCheck()) {
+                System.out.println("Пат! Королю некуда ходить. Запустить игру еще раз? (y/n)");
                 s = scanner.nextLine().toLowerCase();
                 if (s.equals("n")) break;
                 else board = buildBoard();
@@ -100,7 +104,7 @@ public class Main {
                                 System.out.println("Успешно передвинулись");
                                 board.printBoard();
                             } //else if (board.isCheck()) System.out.println("Шах!");
-                                else System.out.println("Передвижение не удалось");
+                            else System.out.println("Передвижение не удалось");
                         } catch (Exception e) {
                             System.out.println("Вы что-то ввели не так, попробуйте ещё раз");
                         }
