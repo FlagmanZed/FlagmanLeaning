@@ -6,7 +6,7 @@ public interface UsableInventory {
 
     void drop(Items item);
 
-    void find(Items item, int index);
+    void exchange(Items find, Items drop);
 
     String show();
 }

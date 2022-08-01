@@ -57,9 +57,29 @@ public class GameMenu {
         System.out.println();
     }
 
+    static void exchangeMenu(){
+        System.out.println("""
+                Что хотите сделать?:
+                'Освободить место       - 1
+                'Ничего не делать       - 0""");
+        System.out.println();
+    }
 
+    static void sellMenu(){
+        System.out.println("""
+                Что хотите сделать?:
+                'Купить предмет         - 1
+                'Ничего не делать       - 0""");
+        System.out.println();
+    }
 
-    static class Choice{
+    static void gameOver(){
+        System.out.println();
+        System.out.println("Бесславному вояке  - бесславный конец....");
+        System.out.println("Ваша миссия завершилась провалом");
+    }
+
+    static class Assist {
 
         static int makeRightChoice(int indexDown, int indexUp) {
             int tmp = -1;

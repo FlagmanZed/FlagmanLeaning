@@ -2,7 +2,7 @@ package RoleGeme;
 
 public class Backpak extends Equipment implements UsableInventory {
 
-    Items[] inventory = new Items[5];
+    protected Items[] inventory = new Items[5];
 
     @Override
     public void take(Items item) {
@@ -14,13 +14,13 @@ public class Backpak extends Equipment implements UsableInventory {
                 break;
             } else continue;
         }
-        if (isEmpty()) {
+        if (isFull()) {
             System.out.println("Рюкзак полон");
             System.out.println();
         }
     }
 
-    boolean isEmpty() {
+    boolean isFull() {
         int tmp = 0;
         for (Items items : inventory) {
             if (items != null) tmp++;
@@ -34,7 +34,7 @@ public class Backpak extends Equipment implements UsableInventory {
             if (inventory[i] == null) continue;
             else {
                 if (inventory[i].name.equals(item.name)) {
-                    System.out.println("Предмет " + inventory[i].name + " выброшен");
+//                    System.out.println("Предмет " + inventory[i].name + " выброшен");
                     inventory[i] = null;
                     break;
                 }
@@ -42,22 +42,23 @@ public class Backpak extends Equipment implements UsableInventory {
         }
     }
 
+
     @Override
-    public void find(Items item, int index) {
-        drop(item);
-        take(item);
+    public void exchange(Items find, Items drop) {
+        drop(drop);
+        take(find);
     }
 
     @Override
     public String show() {
-        String tmp = "";
+        StringBuilder tmp = new StringBuilder();
         int k = 1;
-        for (int i = 0; i < inventory.length; i++) {
-            if (inventory[i] != null) {
-                tmp += (k++ + ". " + inventory[i].name + " " + inventory[i].level + " уровень\n");
+        for (Items items : inventory) {
+            if (items != null) {
+                tmp.append(k++).append(". ").append(items.name).append(" ").append(items.level).append(" уровень\n");
             }
         }
-        if (tmp.equals("")) return "nothing";
+        if (tmp.toString().equals("")) return "nothing";
         else return "В рюкзаке лежит:\n" + tmp;
     }
 
@@ -65,17 +66,17 @@ public class Backpak extends Equipment implements UsableInventory {
         int tmp = 0;
         Items item = null;
         System.out.println("Введите номер предмета:");
-        for (int i = 0; i < inventory.length; i++) {
-            if (inventory[i] != null) tmp++;
+        for (Items value : inventory) {
+            if (value != null) tmp++;
         }
-        int command = GameMenu.Choice.makeRightChoice(1, tmp);
+        int command = GameMenu.Assist.makeRightChoice(1, tmp);
         int k = 0;
-        for (int i = 0; i < inventory.length; i++) {
-            if (inventory[i] == null) continue;
+        for (Items items : inventory) {
+            if (items == null) continue;
             else {
                 k++;
                 if (command == k) {
-                    item = inventory[i];
+                    item = items;
                     break;
                 }
             }

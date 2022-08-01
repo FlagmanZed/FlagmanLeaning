@@ -3,15 +3,16 @@ package RoleGeme;
 public class GameScene {
     Players player;
     Location location;
-    int mainCommand;
+    private int mainCommand, countMove;
 
     GameScene(Players player) {
         this.player = player;
     }
 
     void mainTownScene() {
+        countMove++;
         GameMenu.mainTownMenu();
-        mainCommand = GameMenu.Choice.makeRightChoice(0, 8);
+        mainCommand = GameMenu.Assist.makeRightChoice(0, 8);
         switch (mainCommand) {
             case 1 -> {
                 player.print(player);
@@ -22,15 +23,27 @@ public class GameScene {
                 mainTownScene();
             }
             case 3 -> {
-                System.out.println("Торговец не вышел на работу, может это Covid`19?");
-                System.out.println();
+//                System.out.println("Торговец не вышел на работу, может это Covid`19?");
+//                System.out.println();
+//                mainTownScene();
+                location = new Town();
+                ((DealerPotion) location.npc).showProduct();
+                GameMenu.sellMenu();
+                int tmp = GameMenu.Assist.makeRightChoice(0, 1);
+                if (tmp != 0) ((DealerPotion) location.npc).sellProduct(player);
                 mainTownScene();
             }
             case 4, 5, 6, 7 -> {
                 location = choiceLocationScene();
                 mainLocationScene();
             }
-            case 8 -> System.out.println("Игра окончена");
+            case 8 -> {
+                if (countMove > 100)
+                    System.out.println("Вы терпеливо следовали своему Пути, и заслужили на пенсии большое уважение");
+                else if (countMove <= 100 && countMove > 10)
+                    System.out.println("Вы сполна прошли по Пути, и заслуженный отдых будет вам наградой");
+                else System.out.println("Путь гораздо длиннее, чем прошли вы, попахивает дезертирством....");
+            }
             case 0 -> {
                 mainCommand = 10;
                 if (player.backpak.show().equals("nothing")) {
@@ -41,28 +54,21 @@ public class GameScene {
                     backpackScene();
                 }
                 mainTownScene();
-
             }
         }
-    }
-
-    void scene1() {
-
     }
 
     void sleepScene() {
         player.goSleep();
     }
 
-    void scene3() {
-    }
-
     void mainLocationScene() {
+        countMove++;
         System.out.println(location.name);
         if (location.monster == null) System.out.println("В ближайших окрестностях никого не обнаружено");
         else System.out.println("Вами замечен " + location.monster.name + " " + location.monster.level + " уровня");
         GameMenu.locationMenu();
-        int locCommand = GameMenu.Choice.makeRightChoice(0, 6);
+        int locCommand = GameMenu.Assist.makeRightChoice(0, 6);
         switch (locCommand) {
             case 1 -> {
                 player.print(player);
@@ -70,7 +76,7 @@ public class GameScene {
             }
             case 2 -> {
                 if (location.monster == null) System.out.println("Тут некого рассматривать");
-                else player.print(location.monster);
+                else location.monster.print(location.monster);
                 mainLocationScene();
             }
             case 3 -> {
@@ -79,7 +85,8 @@ public class GameScene {
                     player.attack(player, location.monster);
                     if (location.monster.hp <= 0) location.monster = null;
                 }
-                mainLocationScene();
+                if (player.isDead() && player.lives == -1) GameMenu.gameOver();
+                else mainLocationScene();
             }
             case 4 -> {
                 intelligenceLocation();
@@ -93,7 +100,7 @@ public class GameScene {
                 mainLocationScene();
             }
             case 6 -> mainTownScene();
-            default -> {
+            case 0 -> {
                 mainCommand = 20;
                 if (player.backpak.show().equals("nothing")) {
                     System.out.println("В рюкзаке ничего нет");
@@ -102,24 +109,28 @@ public class GameScene {
                     GameMenu.inventoryMenuChoice();
                     backpackScene();
                 }
+                mainLocationScene();
             }
         }
     }
 
     void backpackScene() {
-        int choiceItemCommand = GameMenu.Choice.makeRightChoice(0, 1);
+        int choiceItemCommand = GameMenu.Assist.makeRightChoice(0, 1);
         switch (choiceItemCommand) {
             case 1 -> {
                 Items item = player.backpak.changeItem();
                 GameMenu.inventoryMenuUse();
-                int useCommand = GameMenu.Choice.makeRightChoice(0, 2);
+                int useCommand = GameMenu.Assist.makeRightChoice(0, 2);
                 switch (useCommand) {
                     case 1 -> {
                         player.use(item);
                         if (mainCommand == 10) mainTownScene();
                         else mainLocationScene();
                     }
-                    case 2 -> player.backpak.drop(item);
+                    case 2 -> {
+                        player.backpak.drop(item);
+                        System.out.println("Предмет " + item.name + " выброшен");
+                    }
                     case 0 -> {
                         if (mainCommand == 10) mainTownScene();
                         else mainLocationScene();
@@ -141,18 +152,36 @@ public class GameScene {
     }
 
     void intelligenceLocation() {
-        Weapon weapon;
-        if ((int) (Math.random() * 100 + 1) < 30) weapon = new DualWeapon();
-        else weapon = new OneWeapon();
+        countMove++;
+        Items something;
+        int percent = (int) (Math.random() * 100 + 1);
+        if (percent > 0 && percent <= 50) something = new Potion();
+        else if (percent > 50 && percent <= 75) something = new OneWeapon();
+        else something = new DualWeapon();
         if ((int) (Math.random() * 100 + 1) < 15) {
-            System.out.println("Внимательно изучая местность вы обнаружили тайник, а в нем: " + weapon.name + " " + weapon.level + " уровня");
+            System.out.println("Внимательно изучая местность вы обнаружили тайник, а в нем: " + something.name + " " + something.level + " уровня");
             GameMenu.takeMenu();
-            int tmp = GameMenu.Choice.makeRightChoice(0, 2);
+            int tmp = GameMenu.Assist.makeRightChoice(0, 2);
             if (tmp == 0) mainLocationScene();
-            else if (tmp == 1) player.use(weapon);
+            else if (tmp == 1) player.use(something);
             else {
-                player.backpak.take(weapon);
-                if (player.backpak.isEmpty()) GameMenu.takeMenu();
+                if (!player.backpak.isFull()) {
+                    player.backpak.take(something);
+
+                } else {
+                    System.out.println("Рюкзак заполнен");
+                    GameMenu.exchangeMenu();
+                    int tmpCommand = GameMenu.Assist.makeRightChoice(0, 1);
+                    switch (tmpCommand) {
+                        case 1 -> {
+                            System.out.println(player.backpak.show());
+                            Items item = player.backpak.changeItem();
+                            player.backpak.drop(item);
+                            player.backpak.take(something);
+                        }
+                        case 0 -> mainLocationScene();
+                    }
+                }
             }
         } else {
             if (location.monster == null)

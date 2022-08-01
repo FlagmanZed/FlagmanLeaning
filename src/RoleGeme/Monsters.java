@@ -1,6 +1,9 @@
 package RoleGeme;
 
-import RoleGeme.Personage;
+/* Класс для создания монстров
+   каждый новый монстр будет случайного уровня от 1 до 10
+   и иметь некоторое количество золота
+ */
 
 public class Monsters extends BattlePersonage {
 

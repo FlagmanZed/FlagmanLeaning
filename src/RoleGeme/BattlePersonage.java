@@ -1,11 +1,15 @@
 package RoleGeme;
+/*  Ёто класс дл€ всех персонажей, которые могут
+    принимать участие в схватке.
+    ¬ арсенале два метода - атака и смотр характеристик
+*/
 
 public class BattlePersonage extends Personage implements Attacking {
 
-    String classMarker;
-    int strength, dexterity;
-    int hp, attack, defense;
-    int level, exp;
+    protected String classMarker;
+    protected int strength, dexterity;
+    protected int hp, attack, defense;
+    protected int level, exp;
 
     BattlePersonage(String name) {
         super(name);
@@ -13,11 +17,13 @@ public class BattlePersonage extends Personage implements Attacking {
 
     @Override
     public void attack(BattlePersonage hero, BattlePersonage monster) {
+        //ќпредел€ем атакующего и защищающегос€
         BattlePersonage attackPers;
         BattlePersonage defensePers;
         int moveCount = 1;
-        if ((int) (Math.random() * 100 + 1) < 5) {
-            System.out.println(monster.name + " оказалс€ быстрее" + hero.name + " и наносит удар первым");
+        //— веро€тностью 90% нападающим будет персонаж игрока
+        if ((int) (Math.random() * 100 + 1) <= 10) {
+            System.out.println(monster.name + " оказалс€ быстрее " + hero.name + " и наносит удар первым");
             attackPers = monster;
             defensePers = hero;
         } else {
@@ -25,42 +31,56 @@ public class BattlePersonage extends Personage implements Attacking {
             attackPers = hero;
             defensePers = monster;
         }
+        /*  «апускаем цикл поочередного нанесени€ ударов. ѕервым бьет атакующий.
+            ¬ случае, если уровень одного из участников битвы на 3 больше другого
+            то этот участник нанесет двойной урон, и получит урон в два раза меньше*/
         while (attackPers.hp > 0 && defensePers.hp > 0) {
             System.out.println("=== ’од " + moveCount + " ===");
-            if (attackPers.level > defensePers.level + 3) {
-                defensePers.hp -= (attackPers.attack * 2);
-                attackPers.hp -= (defensePers.attack / 2);
-            }else if (defensePers.level > attackPers.level + 3){
-                defensePers.hp -= (attackPers.attack / 2);
-                attackPers.hp -= (defensePers.attack * 2);
-            }
-            else {
-                defensePers.hp -= attackPers.attack;
-                attackPers.hp -= defensePers.attack;
+            if (attackPers.level > defensePers.level + 3) defensePers.hp -= (attackPers.attack * 2);
+            else if (defensePers.level > attackPers.level + 3) defensePers.hp -= (attackPers.attack / 2);
+            else defensePers.hp -= attackPers.attack;
+            if (defensePers.hp > 0) {
+                System.out.println(attackPers.name + " бьет и у " + defensePers.name + " осталось " + defensePers.hp);
+            } else {
+                System.out.println(attackPers.name + " бьет и побеждает " + defensePers.name);
+                break;
             }
 
-            if (defensePers.hp > 0 && attackPers.hp > 0) {
-                System.out.println(attackPers.name + " бьет и у " + defensePers.name + " осталось " + defensePers.hp);
+            if (defensePers.level > attackPers.level + 3) attackPers.hp -= (defensePers.attack * 2);
+            else if (defensePers.level < attackPers.level + 3) attackPers.hp -= (defensePers.attack / 2);
+            else attackPers.hp -= defensePers.attack;
+            if (attackPers.hp > 0) {
                 System.out.println(defensePers.name + " бьет и у " + attackPers.name + " осталось " + attackPers.hp);
-            } else if (defensePers.hp > 0 && attackPers.hp <= 0)
+            } else {
                 System.out.println(defensePers.name + " бьет и побеждает " + attackPers.name);
-            else System.out.println(attackPers.name + " бьет и побеждает " + defensePers.name);
+                break;
+            }
 
             moveCount++;
-            GameMenu.Choice.pause(1000);
+            GameMenu.Assist.pause(1000);
         }
+        /* ≈сли персонаж игрока проиграл в битве, то у него отнимаетс€ 1 жизнь,
+            и уровень здоровь€ восполн€етс€ до уровн€ здоровь€ соответствующего
+            уровню персонажа */
         if (hero.hp <= 0) {
             ((Players) hero).lives--;
-            System.out.println("¬ы потратили жизнь, осталось еще " + ((Players) hero).lives);
-            ((Players) hero).hp = ((Players) hero).cloneHP;
+            if (((Players) hero).lives > 0) {
+                System.out.println("¬ы потратили жизнь, осталось еще " + ((Players) hero).lives);
+                hero.hp = ((Players) hero).cloneHP;
+            } else if (((Players) hero).lives == 0) {
+                System.out.println("Ёта жизнь последн€€, будьте внимательны");
+                hero.hp = ((Players) hero).cloneHP;
+            } else ((Players) hero).lives = -1;
+            // ¬ случае победы персонажа игрока - он набирает опыт и забирает золото монстра
         } else {
-            ((Players) hero).exp += ((Monsters) monster).exp;
-            ((Players) hero).gold += ((Monsters) monster).gold;
-            System.out.println(((Players) hero).name + " набрал " + ((Monsters) monster).exp + " опыта, и затрофеил  " + ((Monsters) monster).gold + " золотишка!");
+            hero.exp += monster.exp;
+            hero.gold += monster.gold;
+            System.out.println(hero.name + " набрал " + monster.exp + " опыта, и затрофеил  " + monster.gold + " золотишка!");
             ((Players) hero).levelUp();
         }
     }
 
+    // ѕросмотр характеристик персонажа
     void print(BattlePersonage pers) {
         System.out.println("’арактеристики: " + pers.name);
         System.out.println("”ровень - " + pers.level);

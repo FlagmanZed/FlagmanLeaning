@@ -1,9 +1,12 @@
 package RoleGeme;
+/*  Это абстрактный класс для всех персонажей в игре
+*/
+
 
 public abstract class Personage {
 
-    String name;
-    int gold;
+    protected String name;
+    protected int gold;
 
     Personage(String name) {
         this.name = name;

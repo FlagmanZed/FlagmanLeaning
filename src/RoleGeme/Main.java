@@ -1,23 +1,22 @@
 package RoleGeme;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        Players pers1 = new Human("Arni");
-        GameScene game= new GameScene(pers1);
-        Weapon wep = new OneWeapon();
-        Weapon wep2 = new DualWeapon();
-        Weapon wep3 = new OneWeapon();
-        Weapon wep4 = new DualWeapon();
-//        pers1.use(wep2);
-        pers1.backpak.take(wep);
-        pers1.backpak.take(wep2);
-        pers1.backpak.take(wep3);
-        pers1.backpak.take(wep4);
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Эта микроигра покажет почему у самурая нет цели, а есть только путь");
+        System.out.println("Для познания сего - введите имя вашего персонажа:");
+        String heroName = scan.nextLine();
+
+        Players hero = new Human(heroName);
+        GameScene game = new GameScene(hero);
+        hero.print(hero);
+        System.out.println("Итак, вы прибыли в город N.....");
 
         game.mainTownScene();
-
-
 
     }
 }
