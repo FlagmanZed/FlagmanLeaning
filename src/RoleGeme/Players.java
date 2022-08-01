@@ -147,7 +147,7 @@ public class Players extends BattlePersonage implements Attacking, Useable {
         System.out.println("Атака - " + attack);
         System.out.println("Защита - " + defense);
         System.out.print("Используемое оружие: ");
-        if (rightHand.weapon.typeMarker.equals("dualHandWep")) System.out.println(rightHand.weapon.name);
+        if (rightHand.weapon.typeMarker.equals("dualHandWep")) System.out.println(rightHand.weapon.name + " + " + rightHand.weapon.power + " к силе");
         else if (rightHand.weapon.name.equals("Кулак") && leftHand.weapon.name.equals("Кулак"))
             System.out.println("Кулаки");
         else if (rightHand.weapon.name.equals("Кулак"))
