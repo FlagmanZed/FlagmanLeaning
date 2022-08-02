@@ -9,6 +9,7 @@ public class GameScene {
         this.player = player;
     }
 
+//    Главная сцена действий в городе
     void mainTownScene() {
         countMove++;
         GameMenu.mainTownMenu();
@@ -40,7 +41,7 @@ public class GameScene {
             case 8 -> {
                 if (countMove > 100)
                     System.out.println("Вы терпеливо следовали своему Пути, и заслужили на пенсии большое уважение");
-                else if (countMove <= 100 && countMove > 10)
+                else if (countMove > 10)
                     System.out.println("Вы сполна прошли по Пути, и заслуженный отдых будет вам наградой");
                 else System.out.println("Путь гораздо длиннее, чем прошли вы, попахивает дезертирством....");
             }
@@ -58,10 +59,12 @@ public class GameScene {
         }
     }
 
+//  Восстановление сил дома
     void sleepScene() {
         player.goSleep();
     }
 
+//    Сцена действий в выбранной локации
     void mainLocationScene() {
         countMove++;
         System.out.println(location.name);
@@ -114,6 +117,7 @@ public class GameScene {
         }
     }
 
+//    Сцена действий с инвентарем
     void backpackScene() {
         int choiceItemCommand = GameMenu.Assist.makeRightChoice(0, 1);
         switch (choiceItemCommand) {
@@ -144,6 +148,7 @@ public class GameScene {
         }
     }
 
+//    Определение локации
     Location choiceLocationScene() {
         if (mainCommand == 4) return new Mountain();
         else if (mainCommand == 5) return new Forest();
@@ -151,6 +156,7 @@ public class GameScene {
         else return new Dungeon();
     }
 
+//    Поиск предметов на локации
     void intelligenceLocation() {
         countMove++;
         Items something;

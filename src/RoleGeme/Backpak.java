@@ -4,6 +4,7 @@ public class Backpak extends Equipment implements UsableInventory {
 
     protected Items[] inventory = new Items[5];
 
+//    Персонаж игрока может положить предмет в рюкзак
     @Override
     public void take(Items item) {
         for (int i = 0; i < inventory.length; i++) {
@@ -20,6 +21,7 @@ public class Backpak extends Equipment implements UsableInventory {
         }
     }
 
+//    Проверка заполненности рюкзака
     boolean isFull() {
         int tmp = 0;
         for (Items items : inventory) {
@@ -28,6 +30,7 @@ public class Backpak extends Equipment implements UsableInventory {
         return tmp == inventory.length;
     }
 
+//    выбросить выбранный предмет из рюкзака
     @Override
     public void drop(Items item) {
         for (int i = 0; i < inventory.length; i++) {
@@ -42,13 +45,14 @@ public class Backpak extends Equipment implements UsableInventory {
         }
     }
 
-
+// Выбросить из рюкзака выбранный предмет и положить вместо него другой
     @Override
     public void exchange(Items find, Items drop) {
         drop(drop);
         take(find);
     }
 
+//    Помотреть содержимое рюкзака
     @Override
     public String show() {
         StringBuilder tmp = new StringBuilder();
@@ -62,6 +66,7 @@ public class Backpak extends Equipment implements UsableInventory {
         else return "В рюкзаке лежит:\n" + tmp;
     }
 
+//    Выбрать нужный предмет в рюкзаке
     Items changeItem() {
         int tmp = 0;
         Items item = null;

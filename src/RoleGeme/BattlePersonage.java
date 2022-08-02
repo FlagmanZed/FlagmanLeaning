@@ -17,11 +17,14 @@ public class BattlePersonage extends Personage implements Attacking {
 
     @Override
     public void attack(BattlePersonage hero, BattlePersonage monster) {
-        //Определяем атакующего и защищающегося
+//        Расконсервируй для запуска атаки в отдельном потоке
+/*        Runnable runnable = () -> {*/
+
+//            Определяем атакующего и защищающегося
         BattlePersonage attackPers;
         BattlePersonage defensePers;
         int moveCount = 1;
-        //С вероятностью 90% нападающим будет персонаж игрока
+//            С вероятностью 90% нападающим будет персонаж игрока
         if ((int) (Math.random() * 100 + 1) <= 10) {
             System.out.println(monster.name + " оказался быстрее " + hero.name + " и наносит удар первым");
             attackPers = monster;
@@ -31,26 +34,54 @@ public class BattlePersonage extends Personage implements Attacking {
             attackPers = hero;
             defensePers = monster;
         }
-        /*  Запускаем цикл поочередного нанесения ударов. Первым бьет атакующий.
-            В случае, если уровень одного из участников битвы на 3 больше другого
-            то этот участник нанесет двойной урон, и получит урон в два раза меньше*/
+//            Запускаем цикл поочередного нанесения ударов. Первым бьет атакующий.
+//            В случае, если уровень одного из участников битвы на 3 больше другого
+//            то этот участник нанесет двойной урон, и получит урон в два раза меньше
         while (attackPers.hp > 0 && defensePers.hp > 0) {
+            int rand;
+            int whatPrint = 2;
+            boolean isAttack;
             System.out.println("=== Ход " + moveCount + " ===");
             if (attackPers.level > defensePers.level + 3) defensePers.hp -= (attackPers.attack * 2);
             else if (defensePers.level > attackPers.level + 3) defensePers.hp -= (attackPers.attack / 2);
-            else defensePers.hp -= attackPers.attack;
+            else {
+                rand = (int) (Math.random() * 100 + 1);
+                isAttack = attackPers.dexterity * 3 > rand;
+                if (isAttack && rand >= 93) {
+                    defensePers.hp -= attackPers.attack * 2;
+                    whatPrint = 1;
+                } else if (isAttack) defensePers.hp -= attackPers.attack;
+                else whatPrint = 3;
+            }
             if (defensePers.hp > 0) {
-                System.out.println(attackPers.name + " бьет и у " + defensePers.name + " осталось " + defensePers.hp);
+                switch (whatPrint) {
+                    case 1 -> System.out.println(attackPers.name + " подловил момент и нанес сокрушительный удар " + defensePers.name);
+                    case 2 -> System.out.println(attackPers.name + " бьет и у " + defensePers.name + " осталось " + defensePers.hp);
+                    case 3 -> System.out.println(attackPers.name + " допускает обидный промах и не наносит никакого урона " + defensePers.name);
+                }
             } else {
                 System.out.println(attackPers.name + " бьет и побеждает " + defensePers.name);
                 break;
             }
 
-            if (defensePers.level > attackPers.level + 3) attackPers.hp -= (defensePers.attack * 2);
-            else if (defensePers.level < attackPers.level + 3) attackPers.hp -= (defensePers.attack / 2);
-            else attackPers.hp -= defensePers.attack;
+            whatPrint = 2;
+            if (defensePers.level > attackPers.level + 3) attackPers.hp -= defensePers.attack * 2;
+            else if (defensePers.level + 3 < attackPers.level) attackPers.hp -= defensePers.attack / 2;
+            else {
+                rand = (int) (Math.random() * 100 + 1);
+                isAttack = defensePers.dexterity * 3 > rand;
+                if (isAttack && rand >= 93) {
+                    attackPers.hp -= defensePers.attack * 2;
+                    whatPrint = 1;
+                } else if (isAttack) attackPers.hp -= defensePers.attack;
+                else whatPrint = 3;
+            }
             if (attackPers.hp > 0) {
-                System.out.println(defensePers.name + " бьет и у " + attackPers.name + " осталось " + attackPers.hp);
+                switch (whatPrint) {
+                    case 1 -> System.out.println(defensePers.name + " подловил момент и нанес сокрушительный удар " + attackPers.name);
+                    case 2 -> System.out.println(defensePers.name + " бьет и у " + attackPers.name + " осталось " + attackPers.hp);
+                    case 3 -> System.out.println(defensePers.name + " допускает обидный промах и не наносит никакого урона " + attackPers.name);
+                }
             } else {
                 System.out.println(defensePers.name + " бьет и побеждает " + attackPers.name);
                 break;
@@ -59,9 +90,14 @@ public class BattlePersonage extends Personage implements Attacking {
             moveCount++;
             GameMenu.Assist.pause(1000);
         }
-        /* Если персонаж игрока проиграл в битве, то у него отнимается 1 жизнь,
-            и уровень здоровья восполняется до уровня здоровья соответствующего
-            уровню персонажа */
+//            Расконсервируй для запуска атаки в отдельном потоке
+/*        };
+//        Thread thread = new Thread(runnable);
+          thread.start();*/
+
+/*            Если персонаж игрока проиграл в битве, то у него отнимается 1 жизнь,
+              и уровень здоровья восполняется до уровня здоровья соответствующего
+              уровню персонажа*/
         if (hero.hp <= 0) {
             ((Players) hero).lives--;
             if (((Players) hero).lives > 0) {
@@ -71,7 +107,7 @@ public class BattlePersonage extends Personage implements Attacking {
                 System.out.println("Эта жизнь последняя, будьте внимательны");
                 hero.hp = ((Players) hero).cloneHP;
             } else ((Players) hero).lives = -1;
-            // В случае победы персонажа игрока - он набирает опыт и забирает золото монстра
+//             В случае победы персонажа игрока - он набирает опыт и забирает золото монстра
         } else {
             hero.exp += monster.exp;
             hero.gold += monster.gold;
@@ -80,7 +116,7 @@ public class BattlePersonage extends Personage implements Attacking {
         }
     }
 
-    // Просмотр характеристик персонажа
+    //     Просмотр характеристик персонажа
     void print(BattlePersonage pers) {
         System.out.println("Характеристики: " + pers.name);
         System.out.println("Уровень - " + pers.level);
