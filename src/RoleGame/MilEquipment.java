@@ -1,5 +1,5 @@
 package RoleGame;
 
-public class MilEquipment extends Items {
+public abstract class MilEquipment extends Items {
 
 }

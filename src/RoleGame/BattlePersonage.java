@@ -4,7 +4,7 @@ package RoleGame;
     ¬ арсенале два метода - атака и смотр характеристик
 */
 
-public class BattlePersonage extends Personage implements Attacking {
+public abstract class BattlePersonage extends Personage implements Attacking {
 
     protected String classMarker;
     protected int strength, dexterity;

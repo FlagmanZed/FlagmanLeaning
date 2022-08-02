@@ -5,7 +5,7 @@ package RoleGame;
    и иметь некоторое количество золота
  */
 
-public class Monsters extends BattlePersonage {
+public abstract class Monsters extends BattlePersonage {
 
     public Monsters(String name) {
         super(name);

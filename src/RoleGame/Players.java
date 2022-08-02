@@ -4,7 +4,7 @@ package RoleGame;
    Каждый персонаж может носить снаряжение, использовать оружие
    и переносить 5 предметов в рюкзаке.
  */
-public class Players extends BattlePersonage implements Attacking, Useable {
+public abstract class Players extends BattlePersonage implements Attacking, Useable {
 
     protected int cloneHP, lives;
 

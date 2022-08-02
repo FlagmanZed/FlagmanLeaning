@@ -9,7 +9,7 @@ public class GameScene {
         this.player = player;
     }
 
-//    Главная сцена действий в городе
+    //    Главная сцена действий в городе
     void mainTownScene() {
         countMove++;
         GameMenu.mainTownMenu();
@@ -59,12 +59,12 @@ public class GameScene {
         }
     }
 
-//  Восстановление сил дома
+    //  Восстановление сил дома
     void sleepScene() {
         player.goSleep();
     }
 
-//    Сцена действий в выбранной локации
+    //    Сцена действий в выбранной локации
     void mainLocationScene() {
         countMove++;
         System.out.println(location.name);
@@ -88,7 +88,7 @@ public class GameScene {
                     player.attack(player, location.monster);
                     if (location.monster.hp <= 0) location.monster = null;
                 }
-                if (player.isDead() && player.lives == -1) GameMenu.gameOver();
+                if (player.isDead() && player.lives < 0) GameMenu.gameOver();
                 else mainLocationScene();
             }
             case 4 -> {
@@ -117,7 +117,7 @@ public class GameScene {
         }
     }
 
-//    Сцена действий с инвентарем
+    //    Сцена действий с инвентарем
     void backpackScene() {
         int choiceItemCommand = GameMenu.Assist.makeRightChoice(0, 1);
         switch (choiceItemCommand) {
@@ -148,7 +148,7 @@ public class GameScene {
         }
     }
 
-//    Определение локации
+    //    Определение локации
     Location choiceLocationScene() {
         if (mainCommand == 4) return new Mountain();
         else if (mainCommand == 5) return new Forest();
@@ -156,7 +156,7 @@ public class GameScene {
         else return new Dungeon();
     }
 
-//    Поиск предметов на локации
+    //    Поиск предметов на локации
     void intelligenceLocation() {
         countMove++;
         Items something;
