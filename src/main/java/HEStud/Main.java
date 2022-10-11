@@ -13,7 +13,7 @@ public class Main {
         univercity.setFullName("Московский Институт Иностранных Языков");
         univercity.setShortName("МИИЯ");
         univercity.setYearOfFoundation(1990);
-        univercity.setMainProfile(StudyProfile.FOREIGNLANGUAGE);
+        univercity.setMainProfile(StudyProfile.PHYSICALEDUCATION);
 
         System.out.println(student);
         System.out.println(univercity);
