@@ -1,21 +1,22 @@
 package HEStud;
 
+import java.io.IOException;
+import java.util.List;
+
 public class Main {
 
-    public static void main(String[] args) {Student student = new Student();
-        student.setFullName("Премудрова Елена Васильевна");
-        student.setUniversityId("1");
-        student.setCurrentCourseNumber(3);
-        student.setAvgExamScore(4.9f);
+    public static void main(String[] args) throws IOException {
 
-        University univercity = new University();
-        univercity.setId("1");
-        univercity.setFullName("Московский Институт Иностранных Языков");
-        univercity.setShortName("МИИЯ");
-        univercity.setYearOfFoundation(1990);
-        univercity.setMainProfile(StudyProfile.FOREIGNLANGUAGE);
+        List<University> universities =
+                XlsReader.readXlsUniversities("src/main/resources/universityInfo.xlsx");
+        for(University university : universities) {
+            System.out.println(university);
+        }
 
-        System.out.println(student);
-        System.out.println(univercity);
+        List<Student> students =
+                XlsReader.readXlsStudents("src/main/resources/universityInfo.xlsx");
+        for(Student student : students) {
+            System.out.println(student);
+        }
     }
 }
