@@ -1,5 +1,8 @@
 package HEStud;
 
+import HEStud.Enums.StudyProfile;
+import HEStud.Models.Student;
+import HEStud.Models.University;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -10,9 +13,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class XlsReader {
+public class FileReader {
 
-    private XlsReader() {
+    private FileReader() {
     }
 
     public static List<University> readXlsUniversities(String filePath) throws IOException {

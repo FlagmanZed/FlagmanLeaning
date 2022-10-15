@@ -1,4 +1,4 @@
-package HEStud;
+package HEStud.Enums;
 
 public enum StudyProfile {
 

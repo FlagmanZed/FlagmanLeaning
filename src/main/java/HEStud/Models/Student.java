@@ -1,4 +1,4 @@
-package HEStud;
+package HEStud.Models;
 
 public class Student {
 

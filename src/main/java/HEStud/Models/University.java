@@ -1,4 +1,6 @@
-package HEStud;
+package HEStud.Models;
+
+import HEStud.Enums.StudyProfile;
 
 public class University {
 
