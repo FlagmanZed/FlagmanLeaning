@@ -1,5 +1,9 @@
 package HEStud;
 
+import HEStud.Comparators.StudComparator;
+import HEStud.Comparators.UniverComparator;
+import HEStud.Enums.StudEnum;
+import HEStud.Enums.UniverEnum;
 import HEStud.Models.Student;
 import HEStud.Models.University;
 
@@ -11,15 +15,19 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         List<University> universities =
-                FileReader.readXlsUniversities("src/main/resources/universityInfo.xlsx");
-        for(University university : universities) {
-            System.out.println(university);
-        }
+                FileReader.readUniver("src/main/resources/universityInfo.xlsx");
+        UniverComparator univerComparator =
+                Utilitarian.getUniversityComparator(UniverEnum.UNIVER_YEAR_OF_FOUNDATION);
+        universities.stream()
+                .sorted(univerComparator)
+                .forEach(System.out::println);
 
         List<Student> students =
-                FileReader.readXlsStudents("src/main/resources/universityInfo.xlsx");
-        for(Student student : students) {
-            System.out.println(student);
-        }
+                FileReader.readStud("src/main/resources/universityInfo.xlsx");
+        StudComparator studComparator =
+                Utilitarian.getStudentComparator(StudEnum.STUD_AVG_EXAM_SCORE);
+        students.stream()
+                .sorted(studComparator)
+                .forEach(System.out::println);
     }
 }

@@ -3,8 +3,8 @@ package HEStud.Enums;
 public enum StudyProfile {
 
     MEDICINE("Медицина"),
-    FOREIGNLANGUAGE("Иностранные языки"),
-    PHYSICALEDUCATION("Физическая культура");
+    FOREIGN_LANGUAGE("Иностранные языки"),
+    PHYSICAL_EDUCATION("Физическая культура");
 
     private String profileName;
 

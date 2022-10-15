@@ -18,7 +18,7 @@ public class FileReader {
     private FileReader() {
     }
 
-    public static List<University> readXlsUniversities(String filePath) throws IOException {
+    public static List<University> readUniver(String filePath) throws IOException {
 
         List<University> universities = new ArrayList<>();
 
@@ -44,7 +44,7 @@ public class FileReader {
         return universities;
     }
 
-    public static List<Student> readXlsStudents(String filePath) throws IOException {
+    public static List<Student> readStud(String filePath) throws IOException {
 
         List<Student> students = new ArrayList<>();
 
