@@ -4,6 +4,7 @@ import HEStud.Comparators.StudComparator;
 import HEStud.Comparators.UniverComparator;
 import HEStud.Enums.StudEnum;
 import HEStud.Enums.UniverEnum;
+import HEStud.Models.Statistics;
 import HEStud.Models.Student;
 import HEStud.Models.University;
 
@@ -45,5 +46,8 @@ public class Main {
             Student studentFromJson = JsonUtil.jsonToStudent(studentJson);
             System.out.println(studentFromJson);
         });
+
+        List<Statistics> statisticsList = StatUtil.createStatistics(students, universities);
+        FileWriter.writeStatistics(statisticsList, "statistics.xlsx");
     }
 }

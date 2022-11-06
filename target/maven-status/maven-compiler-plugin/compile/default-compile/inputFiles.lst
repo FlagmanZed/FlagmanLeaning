@@ -3,6 +3,7 @@ C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\
 C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Enums\StudEnum.java
 C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Enums\UniverEnum.java
 C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Comparators\UniverShortName.java
+C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Models\Statistics.java
 C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Comparators\UniverFullName.java
 C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Comparators\UniverID.java
 C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Comparators\UniverYearOfFoundation.java
@@ -11,7 +12,9 @@ C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\
 C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Comparators\StudCurrentCourseNumber.java
 C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Comparators\StudAvgExamScore.java
 C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Comparators\UniverMainProfile.java
+C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\StatUtil.java
 C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Comparators\StudUniversityID.java
+C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\FileWriter.java
 C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Utilitarian.java
 C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Comparators\StudComparator.java
 C:\Users\Flagman_Zed\IdeaProjects\FlagmanLeaning\src\HomeExercize\src\main\java\HEStud\Models\Student.java

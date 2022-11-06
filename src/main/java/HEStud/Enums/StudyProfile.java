@@ -6,15 +6,13 @@ public enum StudyProfile {
     FOREIGN_LANGUAGE("Иностранные языки"),
     PHYSICAL_EDUCATION("Физическая культура");
 
-    private String profileName;
+    private final String profileName;
 
-    StudyProfile(String profileName) {
+    private StudyProfile(String profileName) {
         this.profileName = profileName;
     }
 
-    @Override
-    public String toString() {
-        return "'" + profileName + '\'';
+    public String getProfileName() {
+        return this.profileName;
     }
-
 }
