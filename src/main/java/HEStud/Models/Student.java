@@ -1,9 +1,19 @@
 package HEStud.Models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Student {
 
-    private String fullName, universityId;
+    @SerializedName("StudentName")
+    private String fullName;
+
+    @SerializedName("UniversityId")
+    private String universityId;
+
+    @SerializedName("Course")
     private int currentCourseNumber;
+
+    @SerializedName("AvgScore")
     private float avgExamScore;
 
     public Student() {

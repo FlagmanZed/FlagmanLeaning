@@ -1,11 +1,23 @@
 package HEStud.Models;
 
 import HEStud.Enums.StudyProfile;
+import com.google.gson.annotations.SerializedName;
 
 public class University {
 
-    private String id, fullName, shortName;
+    @SerializedName("UniverId")
+    private String id;
+
+    @SerializedName("UniverName")
+    private String fullName;
+
+    @SerializedName("UniverShortName")
+    private String shortName;
+
+    @SerializedName("YearFoundation")
     private int yearOfFoundation;
+
+    @SerializedName("Profile")
     private StudyProfile mainProfile;
 
     public University() {
