@@ -2,20 +2,35 @@ package HEStud.Models;
 
 import HEStud.Enums.StudyProfile;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Statistics {
 
-    private StudyProfile learningProfile;
+    @XmlElement(name = "universityProfile")
+    private StudyProfile profile;
+
+    @XmlElement(name = "avgScore")
     private float avgExamScore;
-    private int numberOfStudentsByProfile;
-    private int numberOfUniversityByProfile;
+
+    @XmlTransient
+    private int numberOfStudents;
+
+    @XmlTransient
+    private int numberOfUniversities;
+
+    @XmlTransient
     private String universityNames;
 
-    public StudyProfile getLearningProfile() {
-        return learningProfile;
+    public StudyProfile getProfile() {
+        return profile;
     }
 
-    public Statistics setLearningProfile(StudyProfile learningProfile) {
-        this.learningProfile = learningProfile;
+    public Statistics setProfile(StudyProfile profile) {
+        this.profile = profile;
         return this;
     }
 
@@ -28,21 +43,21 @@ public class Statistics {
         return this;
     }
 
-    public int getNumberOfStudentsByProfile() {
-        return numberOfStudentsByProfile;
+    public int getNumberOfStudents() {
+        return numberOfStudents;
     }
 
-    public Statistics setNumberOfStudentsByProfile(int numberOfStudentsByProfile) {
-        this.numberOfStudentsByProfile = numberOfStudentsByProfile;
+    public Statistics setNumberOfStudents(int numberOfStudents) {
+        this.numberOfStudents = numberOfStudents;
         return this;
     }
 
-    public int getNumberOfUniversityByProfile() {
-        return numberOfUniversityByProfile;
+    public int getNumberOfUniversities() {
+        return numberOfUniversities;
     }
 
-    public Statistics setNumberOfUniversityByProfile(int numberOfUniversityByProfile) {
-        this.numberOfUniversityByProfile = numberOfUniversityByProfile;
+    public Statistics setNumberOfUniversities(int numberOfUniversities) {
+        this.numberOfUniversities = numberOfUniversities;
         return this;
     }
 

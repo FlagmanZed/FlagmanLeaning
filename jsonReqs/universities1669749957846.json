@@ -1,0 +1,44 @@
+[
+  {
+    "universityId": "0005-high",
+    "universityName": "Национальный государственный Университет физической культуры, спорта и здоровья имени П.Ф.Лесгафта, Санкт-Петербург",
+    "universityShortName": "НГУ им. П.Ф. Лесгафта",
+    "foundation": 1896,
+    "profile": "PHYSICAL_EDUCATION"
+  },
+  {
+    "universityId": "0002-high",
+    "universityName": "Московский Государственный Лингвистический Университет",
+    "universityShortName": "ИНЯЗ им. М.Тореза",
+    "foundation": 1930,
+    "profile": "FOREIGN_LANGUAGE"
+  },
+  {
+    "universityId": "0004-high",
+    "universityName": "Уральский Государственный Медицинский Университет",
+    "universityShortName": "УГМУ",
+    "foundation": 1930,
+    "profile": "MEDICINE"
+  },
+  {
+    "universityId": "0003-high",
+    "universityName": "Северо-Восточный Федеральный Университет им. М.К. Аммосова",
+    "universityShortName": "СВФУ",
+    "foundation": 1956,
+    "profile": "MEDICINE"
+  },
+  {
+    "universityId": "0006-high",
+    "universityName": "Кубанский государственный университет физической культуры, спорта и туризма",
+    "universityShortName": "КГУФК",
+    "foundation": 1969,
+    "profile": "PHYSICAL_EDUCATION"
+  },
+  {
+    "universityId": "0001-high",
+    "universityName": "Московский институт иностранных языков",
+    "universityShortName": "МИИЯ",
+    "foundation": 1990,
+    "profile": "FOREIGN_LANGUAGE"
+  }
+]

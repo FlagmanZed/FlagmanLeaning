@@ -6,6 +6,9 @@ import HEStud.Enums.StudEnum;
 import HEStud.Enums.UniverEnum;
 import HEStud.FileInstrument.FileReader;
 import HEStud.FileInstrument.FileWriter;
+import HEStud.FileInstrument.WriteJson;
+import HEStud.FileInstrument.WriteXml;
+import HEStud.Models.MaxInfo;
 import HEStud.Models.Statistics;
 import HEStud.Models.Student;
 import HEStud.Models.University;
@@ -14,6 +17,7 @@ import HEStud.Util.StatUtil;
 import HEStud.Util.Utilitarian;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -51,5 +55,16 @@ public class Main {
         FileWriter.writeXlsStatistics(statisticsList, "statistics.xlsx");
 
         logger.log(INFO, "Приложение остановлено");
+
+        MaxInfo maxInfo = new MaxInfo()
+                .setStudentList(students)
+                .setUniversityList(universities)
+                .setStatisticsList(statisticsList)
+                .setProcessDate(new Date());
+
+        WriteXml.generateXmlReq(maxInfo);
+        WriteJson.writeJsonReq(maxInfo);
+
+        logger.log(INFO, "Application finished");
     }
 }

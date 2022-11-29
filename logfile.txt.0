@@ -1,0 +1,1538 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-29T18:18:05.929867800Z</date>
+  <millis>1669745885929</millis>
+  <nanos>867800</nanos>
+  <sequence>0</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Application started, Logger configured</message>
+</record>
+<record>
+  <date>2022-11-29T18:18:05.995829500Z</date>
+  <millis>1669745885995</millis>
+  <nanos>829500</nanos>
+  <sequence>1</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T18:18:07.337308100Z</date>
+  <millis>1669745887337</millis>
+  <nanos>308100</nanos>
+  <sequence>2</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T18:18:07.341305800Z</date>
+  <millis>1669745887341</millis>
+  <nanos>305800</nanos>
+  <sequence>3</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T18:18:07.379720700Z</date>
+  <millis>1669745887379</millis>
+  <nanos>720700</nanos>
+  <sequence>4</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T18:18:07.391715Z</date>
+  <millis>1669745887391</millis>
+  <nanos>715000</nanos>
+  <sequence>5</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing started</message>
+</record>
+<record>
+  <date>2022-11-29T18:18:07.585800100Z</date>
+  <millis>1669745887585</millis>
+  <nanos>800100</nanos>
+  <sequence>6</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing finished successfully</message>
+</record>
+<record>
+  <date>2022-11-29T18:18:07.586798500Z</date>
+  <millis>1669745887586</millis>
+  <nanos>798500</nanos>
+  <sequence>7</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Application finished</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-29T18:20:58.030964Z</date>
+  <millis>1669746058030</millis>
+  <nanos>964000</nanos>
+  <sequence>0</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение запущено, Logger настроен</message>
+</record>
+<record>
+  <date>2022-11-29T18:20:58.086931500Z</date>
+  <millis>1669746058086</millis>
+  <nanos>931500</nanos>
+  <sequence>1</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T18:20:59.261260400Z</date>
+  <millis>1669746059261</millis>
+  <nanos>260400</nanos>
+  <sequence>2</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T18:20:59.265258700Z</date>
+  <millis>1669746059265</millis>
+  <nanos>258700</nanos>
+  <sequence>3</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T18:20:59.322228100Z</date>
+  <millis>1669746059322</millis>
+  <nanos>228100</nanos>
+  <sequence>4</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T18:20:59.336218100Z</date>
+  <millis>1669746059336</millis>
+  <nanos>218100</nanos>
+  <sequence>5</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing started</message>
+</record>
+<record>
+  <date>2022-11-29T18:20:59.537103400Z</date>
+  <millis>1669746059537</millis>
+  <nanos>103400</nanos>
+  <sequence>6</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing finished successfully</message>
+</record>
+<record>
+  <date>2022-11-29T18:20:59.538103500Z</date>
+  <millis>1669746059538</millis>
+  <nanos>103500</nanos>
+  <sequence>7</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение остановлено</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-29T19:13:10.861786300Z</date>
+  <millis>1669749190861</millis>
+  <nanos>786300</nanos>
+  <sequence>0</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение запущено, Logger настроен</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:10.916756400Z</date>
+  <millis>1669749190916</millis>
+  <nanos>756400</nanos>
+  <sequence>1</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.026121100Z</date>
+  <millis>1669749192026</millis>
+  <nanos>121100</nanos>
+  <sequence>2</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.030119Z</date>
+  <millis>1669749192030</millis>
+  <nanos>119000</nanos>
+  <sequence>3</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.075093200Z</date>
+  <millis>1669749192075</millis>
+  <nanos>93200</nanos>
+  <sequence>4</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.078091400Z</date>
+  <millis>1669749192078</millis>
+  <nanos>91400</nanos>
+  <sequence>5</sequence>
+  <logger>HEStud.Util.StatUtil</logger>
+  <level>INFO</level>
+  <class>HEStud.Util.StatUtil</class>
+  <method>createStatistics</method>
+  <thread>1</thread>
+  <message>Statistics module started</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.088085800Z</date>
+  <millis>1669749192088</millis>
+  <nanos>85800</nanos>
+  <sequence>6</sequence>
+  <logger>HEStud.Util.StatUtil</logger>
+  <level>INFO</level>
+  <class>HEStud.Util.StatUtil</class>
+  <method>createStatistics</method>
+  <thread>1</thread>
+  <message>Statistics module finished with 3 statistical objects</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.090085400Z</date>
+  <millis>1669749192090</millis>
+  <nanos>85400</nanos>
+  <sequence>7</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing started</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.288971800Z</date>
+  <millis>1669749192288</millis>
+  <nanos>971800</nanos>
+  <sequence>8</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing finished successfully</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.289969800Z</date>
+  <millis>1669749192289</millis>
+  <nanos>969800</nanos>
+  <sequence>9</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение остановлено</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.292968900Z</date>
+  <millis>1669749192292</millis>
+  <nanos>968900</nanos>
+  <sequence>10</sequence>
+  <logger>HEStud.FileInstrument.WriteXml</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteXml</class>
+  <method>generateXmlReq</method>
+  <thread>1</thread>
+  <message>XML marshalling started</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.297966400Z</date>
+  <millis>1669749192297</millis>
+  <nanos>966400</nanos>
+  <sequence>11</sequence>
+  <logger>HEStud.FileInstrument.WriteXml</logger>
+  <level>SEVERE</level>
+  <class>HEStud.FileInstrument.WriteXml</class>
+  <method>generateXmlReq</method>
+  <thread>1</thread>
+  <message>XML marshalling failed</message>
+  <exception>
+    <message>javax.xml.bind.JAXBException
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.bind.v2.ContextFactory]</message>
+    <frame>
+      <class>javax.xml.bind.ContextFinder</class>
+      <method>newInstance</method>
+      <line>196</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.ContextFinder</class>
+      <method>find</method>
+      <line>385</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.JAXBContext</class>
+      <method>newInstance</method>
+      <line>574</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.JAXBContext</class>
+      <method>newInstance</method>
+      <line>522</line>
+    </frame>
+    <frame>
+      <class>HEStud.FileInstrument.WriteXml</class>
+      <method>generateXmlReq</method>
+      <line>27</line>
+    </frame>
+    <frame>
+      <class>HEStud.Main</class>
+      <method>main</method>
+      <line>65</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.300964300Z</date>
+  <millis>1669749192300</millis>
+  <nanos>964300</nanos>
+  <sequence>12</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>JSON writing started</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.301963300Z</date>
+  <millis>1669749192301</millis>
+  <nanos>963300</nanos>
+  <sequence>13</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>Directory created successfully</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.369926200Z</date>
+  <millis>1669749192369</millis>
+  <nanos>926200</nanos>
+  <sequence>14</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>JSON writing finished successfully</message>
+</record>
+<record>
+  <date>2022-11-29T19:13:12.370924500Z</date>
+  <millis>1669749192370</millis>
+  <nanos>924500</nanos>
+  <sequence>15</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Application finished</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-29T19:17:34.959512600Z</date>
+  <millis>1669749454959</millis>
+  <nanos>512600</nanos>
+  <sequence>0</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение запущено, Logger настроен</message>
+</record>
+<record>
+  <date>2022-11-29T19:17:35.023476100Z</date>
+  <millis>1669749455023</millis>
+  <nanos>476100</nanos>
+  <sequence>1</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T19:17:36.244779200Z</date>
+  <millis>1669749456244</millis>
+  <nanos>779200</nanos>
+  <sequence>2</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T19:17:36.249775400Z</date>
+  <millis>1669749456249</millis>
+  <nanos>775400</nanos>
+  <sequence>3</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T19:17:36.298747600Z</date>
+  <millis>1669749456298</millis>
+  <nanos>747600</nanos>
+  <sequence>4</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T19:17:36.300746700Z</date>
+  <millis>1669749456300</millis>
+  <nanos>746700</nanos>
+  <sequence>5</sequence>
+  <logger>HEStud.Util.StatUtil</logger>
+  <level>INFO</level>
+  <class>HEStud.Util.StatUtil</class>
+  <method>createStatistics</method>
+  <thread>1</thread>
+  <message>Statistics module started</message>
+</record>
+<record>
+  <date>2022-11-29T19:17:36.311740600Z</date>
+  <millis>1669749456311</millis>
+  <nanos>740600</nanos>
+  <sequence>6</sequence>
+  <logger>HEStud.Util.StatUtil</logger>
+  <level>INFO</level>
+  <class>HEStud.Util.StatUtil</class>
+  <method>createStatistics</method>
+  <thread>1</thread>
+  <message>Statistics module finished with 3 statistical objects</message>
+</record>
+<record>
+  <date>2022-11-29T19:17:36.313739Z</date>
+  <millis>1669749456313</millis>
+  <nanos>739000</nanos>
+  <sequence>7</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing started</message>
+</record>
+<record>
+  <date>2022-11-29T19:17:36.482642400Z</date>
+  <millis>1669749456482</millis>
+  <nanos>642400</nanos>
+  <sequence>8</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing finished successfully</message>
+</record>
+<record>
+  <date>2022-11-29T19:17:36.483643300Z</date>
+  <millis>1669749456483</millis>
+  <nanos>643300</nanos>
+  <sequence>9</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение остановлено</message>
+</record>
+<record>
+  <date>2022-11-29T19:17:36.485640700Z</date>
+  <millis>1669749456485</millis>
+  <nanos>640700</nanos>
+  <sequence>10</sequence>
+  <logger>HEStud.FileInstrument.WriteXml</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteXml</class>
+  <method>generateXmlReq</method>
+  <thread>1</thread>
+  <message>XML marshalling started</message>
+</record>
+<record>
+  <date>2022-11-29T19:17:36.490639Z</date>
+  <millis>1669749456490</millis>
+  <nanos>639000</nanos>
+  <sequence>11</sequence>
+  <logger>HEStud.FileInstrument.WriteXml</logger>
+  <level>SEVERE</level>
+  <class>HEStud.FileInstrument.WriteXml</class>
+  <method>generateXmlReq</method>
+  <thread>1</thread>
+  <message>XML marshalling failed</message>
+  <exception>
+    <message>javax.xml.bind.JAXBException
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.bind.v2.ContextFactory]</message>
+    <frame>
+      <class>javax.xml.bind.ContextFinder</class>
+      <method>newInstance</method>
+      <line>196</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.ContextFinder</class>
+      <method>find</method>
+      <line>385</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.JAXBContext</class>
+      <method>newInstance</method>
+      <line>574</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.JAXBContext</class>
+      <method>newInstance</method>
+      <line>522</line>
+    </frame>
+    <frame>
+      <class>HEStud.FileInstrument.WriteXml</class>
+      <method>generateXmlReq</method>
+      <line>27</line>
+    </frame>
+    <frame>
+      <class>HEStud.Main</class>
+      <method>main</method>
+      <line>65</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2022-11-29T19:17:36.493636400Z</date>
+  <millis>1669749456493</millis>
+  <nanos>636400</nanos>
+  <sequence>12</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>JSON writing started</message>
+</record>
+<record>
+  <date>2022-11-29T19:17:36.555602200Z</date>
+  <millis>1669749456555</millis>
+  <nanos>602200</nanos>
+  <sequence>13</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>JSON writing finished successfully</message>
+</record>
+<record>
+  <date>2022-11-29T19:17:36.555602200Z</date>
+  <millis>1669749456555</millis>
+  <nanos>602200</nanos>
+  <sequence>14</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Application finished</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-29T19:20:21.102509600Z</date>
+  <millis>1669749621102</millis>
+  <nanos>509600</nanos>
+  <sequence>0</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение запущено, Logger настроен</message>
+</record>
+<record>
+  <date>2022-11-29T19:20:21.171472500Z</date>
+  <millis>1669749621171</millis>
+  <nanos>472500</nanos>
+  <sequence>1</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T19:20:22.349797100Z</date>
+  <millis>1669749622349</millis>
+  <nanos>797100</nanos>
+  <sequence>2</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T19:20:22.354794500Z</date>
+  <millis>1669749622354</millis>
+  <nanos>794500</nanos>
+  <sequence>3</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T19:20:22.404765800Z</date>
+  <millis>1669749622404</millis>
+  <nanos>765800</nanos>
+  <sequence>4</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T19:20:22.407764Z</date>
+  <millis>1669749622407</millis>
+  <nanos>764000</nanos>
+  <sequence>5</sequence>
+  <logger>HEStud.Util.StatUtil</logger>
+  <level>INFO</level>
+  <class>HEStud.Util.StatUtil</class>
+  <method>createStatistics</method>
+  <thread>1</thread>
+  <message>Statistics module started</message>
+</record>
+<record>
+  <date>2022-11-29T19:20:22.416760800Z</date>
+  <millis>1669749622416</millis>
+  <nanos>760800</nanos>
+  <sequence>6</sequence>
+  <logger>HEStud.Util.StatUtil</logger>
+  <level>INFO</level>
+  <class>HEStud.Util.StatUtil</class>
+  <method>createStatistics</method>
+  <thread>1</thread>
+  <message>Statistics module finished with 3 statistical objects</message>
+</record>
+<record>
+  <date>2022-11-29T19:20:22.418757900Z</date>
+  <millis>1669749622418</millis>
+  <nanos>757900</nanos>
+  <sequence>7</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing started</message>
+</record>
+<record>
+  <date>2022-11-29T19:20:22.593658700Z</date>
+  <millis>1669749622593</millis>
+  <nanos>658700</nanos>
+  <sequence>8</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing finished successfully</message>
+</record>
+<record>
+  <date>2022-11-29T19:20:22.594658300Z</date>
+  <millis>1669749622594</millis>
+  <nanos>658300</nanos>
+  <sequence>9</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение остановлено</message>
+</record>
+<record>
+  <date>2022-11-29T19:20:22.597656700Z</date>
+  <millis>1669749622597</millis>
+  <nanos>656700</nanos>
+  <sequence>10</sequence>
+  <logger>HEStud.FileInstrument.WriteXml</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteXml</class>
+  <method>generateXmlReq</method>
+  <thread>1</thread>
+  <message>XML marshalling started</message>
+</record>
+<record>
+  <date>2022-11-29T19:20:22.604655Z</date>
+  <millis>1669749622604</millis>
+  <nanos>655000</nanos>
+  <sequence>11</sequence>
+  <logger>HEStud.FileInstrument.WriteXml</logger>
+  <level>SEVERE</level>
+  <class>HEStud.FileInstrument.WriteXml</class>
+  <method>generateXmlReq</method>
+  <thread>1</thread>
+  <message>Сортировка не удалась</message>
+  <exception>
+    <message>javax.xml.bind.JAXBException
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.bind.v2.ContextFactory]</message>
+    <frame>
+      <class>javax.xml.bind.ContextFinder</class>
+      <method>newInstance</method>
+      <line>196</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.ContextFinder</class>
+      <method>find</method>
+      <line>385</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.JAXBContext</class>
+      <method>newInstance</method>
+      <line>574</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.JAXBContext</class>
+      <method>newInstance</method>
+      <line>522</line>
+    </frame>
+    <frame>
+      <class>HEStud.FileInstrument.WriteXml</class>
+      <method>generateXmlReq</method>
+      <line>27</line>
+    </frame>
+    <frame>
+      <class>HEStud.Main</class>
+      <method>main</method>
+      <line>65</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2022-11-29T19:20:22.607652600Z</date>
+  <millis>1669749622607</millis>
+  <nanos>652600</nanos>
+  <sequence>12</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>JSON writing started</message>
+</record>
+<record>
+  <date>2022-11-29T19:20:22.682607400Z</date>
+  <millis>1669749622682</millis>
+  <nanos>607400</nanos>
+  <sequence>13</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>JSON writing finished successfully</message>
+</record>
+<record>
+  <date>2022-11-29T19:20:22.683609200Z</date>
+  <millis>1669749622683</millis>
+  <nanos>609200</nanos>
+  <sequence>14</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Application finished</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-29T19:22:48.594286800Z</date>
+  <millis>1669749768594</millis>
+  <nanos>286800</nanos>
+  <sequence>0</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение запущено, Logger настроен</message>
+</record>
+<record>
+  <date>2022-11-29T19:22:48.658247800Z</date>
+  <millis>1669749768658</millis>
+  <nanos>247800</nanos>
+  <sequence>1</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T19:22:49.823582700Z</date>
+  <millis>1669749769823</millis>
+  <nanos>582700</nanos>
+  <sequence>2</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T19:22:49.827580200Z</date>
+  <millis>1669749769827</millis>
+  <nanos>580200</nanos>
+  <sequence>3</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T19:22:49.876551800Z</date>
+  <millis>1669749769876</millis>
+  <nanos>551800</nanos>
+  <sequence>4</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T19:22:49.879550800Z</date>
+  <millis>1669749769879</millis>
+  <nanos>550800</nanos>
+  <sequence>5</sequence>
+  <logger>HEStud.Util.StatUtil</logger>
+  <level>INFO</level>
+  <class>HEStud.Util.StatUtil</class>
+  <method>createStatistics</method>
+  <thread>1</thread>
+  <message>Statistics module started</message>
+</record>
+<record>
+  <date>2022-11-29T19:22:49.890543700Z</date>
+  <millis>1669749769890</millis>
+  <nanos>543700</nanos>
+  <sequence>6</sequence>
+  <logger>HEStud.Util.StatUtil</logger>
+  <level>INFO</level>
+  <class>HEStud.Util.StatUtil</class>
+  <method>createStatistics</method>
+  <thread>1</thread>
+  <message>Statistics module finished with 3 statistical objects</message>
+</record>
+<record>
+  <date>2022-11-29T19:22:49.891543300Z</date>
+  <millis>1669749769891</millis>
+  <nanos>543300</nanos>
+  <sequence>7</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing started</message>
+</record>
+<record>
+  <date>2022-11-29T19:22:50.107420200Z</date>
+  <millis>1669749770107</millis>
+  <nanos>420200</nanos>
+  <sequence>8</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing finished successfully</message>
+</record>
+<record>
+  <date>2022-11-29T19:22:50.108419400Z</date>
+  <millis>1669749770108</millis>
+  <nanos>419400</nanos>
+  <sequence>9</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение остановлено</message>
+</record>
+<record>
+  <date>2022-11-29T19:22:50.110418Z</date>
+  <millis>1669749770110</millis>
+  <nanos>418000</nanos>
+  <sequence>10</sequence>
+  <logger>HEStud.FileInstrument.WriteXml</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteXml</class>
+  <method>generateXmlReq</method>
+  <thread>1</thread>
+  <message>XML marshalling started</message>
+</record>
+<record>
+  <date>2022-11-29T19:22:50.116414400Z</date>
+  <millis>1669749770116</millis>
+  <nanos>414400</nanos>
+  <sequence>11</sequence>
+  <logger>HEStud.FileInstrument.WriteXml</logger>
+  <level>SEVERE</level>
+  <class>HEStud.FileInstrument.WriteXml</class>
+  <method>generateXmlReq</method>
+  <thread>1</thread>
+  <message>Сортировка не удалась</message>
+  <exception>
+    <message>javax.xml.bind.JAXBException
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.bind.v2.ContextFactory]</message>
+    <frame>
+      <class>javax.xml.bind.ContextFinder</class>
+      <method>newInstance</method>
+      <line>196</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.ContextFinder</class>
+      <method>find</method>
+      <line>385</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.JAXBContext</class>
+      <method>newInstance</method>
+      <line>574</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.JAXBContext</class>
+      <method>newInstance</method>
+      <line>522</line>
+    </frame>
+    <frame>
+      <class>HEStud.FileInstrument.WriteXml</class>
+      <method>generateXmlReq</method>
+      <line>27</line>
+    </frame>
+    <frame>
+      <class>HEStud.Main</class>
+      <method>main</method>
+      <line>65</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2022-11-29T19:22:50.119414100Z</date>
+  <millis>1669749770119</millis>
+  <nanos>414100</nanos>
+  <sequence>12</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>JSON запись началась</message>
+</record>
+<record>
+  <date>2022-11-29T19:22:50.203366700Z</date>
+  <millis>1669749770203</millis>
+  <nanos>366700</nanos>
+  <sequence>13</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>JSON запись успешно завершена</message>
+</record>
+<record>
+  <date>2022-11-29T19:22:50.205365700Z</date>
+  <millis>1669749770205</millis>
+  <nanos>365700</nanos>
+  <sequence>14</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Application finished</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-29T19:25:56.376695500Z</date>
+  <millis>1669749956376</millis>
+  <nanos>695500</nanos>
+  <sequence>0</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение запущено, Logger настроен</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:56.430665400Z</date>
+  <millis>1669749956430</millis>
+  <nanos>665400</nanos>
+  <sequence>1</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.580009500Z</date>
+  <millis>1669749957580</millis>
+  <nanos>9500</nanos>
+  <sequence>2</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.586004900Z</date>
+  <millis>1669749957586</millis>
+  <nanos>4900</nanos>
+  <sequence>3</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.639974700Z</date>
+  <millis>1669749957639</millis>
+  <nanos>974700</nanos>
+  <sequence>4</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.641973800Z</date>
+  <millis>1669749957641</millis>
+  <nanos>973800</nanos>
+  <sequence>5</sequence>
+  <logger>HEStud.Util.StatUtil</logger>
+  <level>INFO</level>
+  <class>HEStud.Util.StatUtil</class>
+  <method>createStatistics</method>
+  <thread>1</thread>
+  <message>Statistics module started</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.649968100Z</date>
+  <millis>1669749957649</millis>
+  <nanos>968100</nanos>
+  <sequence>6</sequence>
+  <logger>HEStud.Util.StatUtil</logger>
+  <level>INFO</level>
+  <class>HEStud.Util.StatUtil</class>
+  <method>createStatistics</method>
+  <thread>1</thread>
+  <message>Statistics module finished with 3 statistical objects</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.650967700Z</date>
+  <millis>1669749957650</millis>
+  <nanos>967700</nanos>
+  <sequence>7</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing started</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.843859100Z</date>
+  <millis>1669749957843</millis>
+  <nanos>859100</nanos>
+  <sequence>8</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing finished successfully</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.844859100Z</date>
+  <millis>1669749957844</millis>
+  <nanos>859100</nanos>
+  <sequence>9</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение остановлено</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.847856400Z</date>
+  <millis>1669749957847</millis>
+  <nanos>856400</nanos>
+  <sequence>10</sequence>
+  <logger>HEStud.FileInstrument.WriteXml</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteXml</class>
+  <method>generateXmlReq</method>
+  <thread>1</thread>
+  <message>XML Сортировка началась</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.852854600Z</date>
+  <millis>1669749957852</millis>
+  <nanos>854600</nanos>
+  <sequence>11</sequence>
+  <logger>HEStud.FileInstrument.WriteXml</logger>
+  <level>SEVERE</level>
+  <class>HEStud.FileInstrument.WriteXml</class>
+  <method>generateXmlReq</method>
+  <thread>1</thread>
+  <message>Сортировка не удалась</message>
+  <exception>
+    <message>javax.xml.bind.JAXBException
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.bind.v2.ContextFactory]</message>
+    <frame>
+      <class>javax.xml.bind.ContextFinder</class>
+      <method>newInstance</method>
+      <line>196</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.ContextFinder</class>
+      <method>find</method>
+      <line>385</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.JAXBContext</class>
+      <method>newInstance</method>
+      <line>574</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.JAXBContext</class>
+      <method>newInstance</method>
+      <line>522</line>
+    </frame>
+    <frame>
+      <class>HEStud.FileInstrument.WriteXml</class>
+      <method>generateXmlReq</method>
+      <line>27</line>
+    </frame>
+    <frame>
+      <class>HEStud.Main</class>
+      <method>main</method>
+      <line>65</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.856850400Z</date>
+  <millis>1669749957856</millis>
+  <nanos>850400</nanos>
+  <sequence>12</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>JSON запись началась</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.857850600Z</date>
+  <millis>1669749957857</millis>
+  <nanos>850600</nanos>
+  <sequence>13</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>Каталог успешно создан</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.925810700Z</date>
+  <millis>1669749957925</millis>
+  <nanos>810700</nanos>
+  <sequence>14</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>JSON запись успешно завершена</message>
+</record>
+<record>
+  <date>2022-11-29T19:25:57.926809800Z</date>
+  <millis>1669749957926</millis>
+  <nanos>809800</nanos>
+  <sequence>15</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Application finished</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-11-29T19:31:22.708913500Z</date>
+  <millis>1669750282708</millis>
+  <nanos>913500</nanos>
+  <sequence>0</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение запущено, Logger настроен</message>
+</record>
+<record>
+  <date>2022-11-29T19:31:22.766880100Z</date>
+  <millis>1669750282766</millis>
+  <nanos>880100</nanos>
+  <sequence>1</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T19:31:23.882242900Z</date>
+  <millis>1669750283882</millis>
+  <nanos>242900</nanos>
+  <sequence>2</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsUniversities</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T19:31:23.886240400Z</date>
+  <millis>1669750283886</millis>
+  <nanos>240400</nanos>
+  <sequence>3</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла началось</message>
+</record>
+<record>
+  <date>2022-11-29T19:31:23.929216100Z</date>
+  <millis>1669750283929</millis>
+  <nanos>216100</nanos>
+  <sequence>4</sequence>
+  <logger>HEStud.FileInstrument.FileReader</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileReader</class>
+  <method>readXlsStudents</method>
+  <thread>1</thread>
+  <message>Чтение файла завершено</message>
+</record>
+<record>
+  <date>2022-11-29T19:31:23.931214700Z</date>
+  <millis>1669750283931</millis>
+  <nanos>214700</nanos>
+  <sequence>5</sequence>
+  <logger>HEStud.Util.StatUtil</logger>
+  <level>INFO</level>
+  <class>HEStud.Util.StatUtil</class>
+  <method>createStatistics</method>
+  <thread>1</thread>
+  <message>Statistics module started</message>
+</record>
+<record>
+  <date>2022-11-29T19:31:23.939210Z</date>
+  <millis>1669750283939</millis>
+  <nanos>210000</nanos>
+  <sequence>6</sequence>
+  <logger>HEStud.Util.StatUtil</logger>
+  <level>INFO</level>
+  <class>HEStud.Util.StatUtil</class>
+  <method>createStatistics</method>
+  <thread>1</thread>
+  <message>Statistics module finished with 3 statistical objects</message>
+</record>
+<record>
+  <date>2022-11-29T19:31:23.940210100Z</date>
+  <millis>1669750283940</millis>
+  <nanos>210100</nanos>
+  <sequence>7</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing started</message>
+</record>
+<record>
+  <date>2022-11-29T19:31:24.123105800Z</date>
+  <millis>1669750284123</millis>
+  <nanos>105800</nanos>
+  <sequence>8</sequence>
+  <logger>HEStud.FileInstrument.FileWriter</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.FileWriter</class>
+  <method>writeXlsStatistics</method>
+  <thread>1</thread>
+  <message>Excel writing finished successfully</message>
+</record>
+<record>
+  <date>2022-11-29T19:31:24.123105800Z</date>
+  <millis>1669750284123</millis>
+  <nanos>105800</nanos>
+  <sequence>9</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Приложение остановлено</message>
+</record>
+<record>
+  <date>2022-11-29T19:31:24.127103500Z</date>
+  <millis>1669750284127</millis>
+  <nanos>103500</nanos>
+  <sequence>10</sequence>
+  <logger>HEStud.FileInstrument.WriteXml</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteXml</class>
+  <method>generateXmlReq</method>
+  <thread>1</thread>
+  <message>XML Сортировка началась</message>
+</record>
+<record>
+  <date>2022-11-29T19:31:24.134101500Z</date>
+  <millis>1669750284134</millis>
+  <nanos>101500</nanos>
+  <sequence>11</sequence>
+  <logger>HEStud.FileInstrument.WriteXml</logger>
+  <level>SEVERE</level>
+  <class>HEStud.FileInstrument.WriteXml</class>
+  <method>generateXmlReq</method>
+  <thread>1</thread>
+  <message>Сортировка не удалась</message>
+  <exception>
+    <message>javax.xml.bind.JAXBException
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.bind.v2.ContextFactory]</message>
+    <frame>
+      <class>javax.xml.bind.ContextFinder</class>
+      <method>newInstance</method>
+      <line>196</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.ContextFinder</class>
+      <method>find</method>
+      <line>385</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.JAXBContext</class>
+      <method>newInstance</method>
+      <line>574</line>
+    </frame>
+    <frame>
+      <class>javax.xml.bind.JAXBContext</class>
+      <method>newInstance</method>
+      <line>522</line>
+    </frame>
+    <frame>
+      <class>HEStud.FileInstrument.WriteXml</class>
+      <method>generateXmlReq</method>
+      <line>27</line>
+    </frame>
+    <frame>
+      <class>HEStud.Main</class>
+      <method>main</method>
+      <line>65</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2022-11-29T19:31:24.137097300Z</date>
+  <millis>1669750284137</millis>
+  <nanos>97300</nanos>
+  <sequence>12</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>JSON запись началась</message>
+</record>
+<record>
+  <date>2022-11-29T19:31:24.208057200Z</date>
+  <millis>1669750284208</millis>
+  <nanos>57200</nanos>
+  <sequence>13</sequence>
+  <logger>HEStud.FileInstrument.WriteJson</logger>
+  <level>INFO</level>
+  <class>HEStud.FileInstrument.WriteJson</class>
+  <method>writeJsonReq</method>
+  <thread>1</thread>
+  <message>JSON запись успешно завершена</message>
+</record>
+<record>
+  <date>2022-11-29T19:31:24.209058300Z</date>
+  <millis>1669750284209</millis>
+  <nanos>58300</nanos>
+  <sequence>14</sequence>
+  <logger>HEStud.Main</logger>
+  <level>INFO</level>
+  <class>HEStud.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Application finished</message>
+</record>
+</log>

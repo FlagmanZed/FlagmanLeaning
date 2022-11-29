@@ -1,0 +1,23 @@
+[
+  {
+    "profile": "MEDICINE",
+    "avgExamScore": 4.5,
+    "numberOfStudents": 4,
+    "numberOfUniversities": 2,
+    "universityNames": "Уральский Государственный Медицинский Университет;Северо-Восточный Федеральный Университет им. М.К. Аммосова;"
+  },
+  {
+    "profile": "PHYSICAL_EDUCATION",
+    "avgExamScore": 4.57,
+    "numberOfStudents": 3,
+    "numberOfUniversities": 2,
+    "universityNames": "Национальный государственный Университет физической культуры, спорта и здоровья имени П.Ф.Лесгафта, Санкт-Петербург;Кубанский государственный университет физической культуры, спорта и туризма;"
+  },
+  {
+    "profile": "FOREIGN_LANGUAGE",
+    "avgExamScore": 4.4,
+    "numberOfStudents": 4,
+    "numberOfUniversities": 2,
+    "universityNames": "Московский Государственный Лингвистический Университет;Московский институт иностранных языков;"
+  }
+]

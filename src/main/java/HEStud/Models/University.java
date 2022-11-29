@@ -3,21 +3,32 @@ package HEStud.Models;
 import HEStud.Enums.StudyProfile;
 import com.google.gson.annotations.SerializedName;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class University {
 
-    @SerializedName("UniverId")
+    @SerializedName("universityId")
+    @XmlElement(name = "universityId")
     private String id;
 
-    @SerializedName("UniverName")
+    @SerializedName("universityName")
+    @XmlElement(name = "universityName")
     private String fullName;
 
-    @SerializedName("UniverShortName")
+    @SerializedName("universityShortName")
+    @XmlTransient
     private String shortName;
 
-    @SerializedName("YearFoundation")
+    @SerializedName("foundation")
+    @XmlTransient
     private int yearOfFoundation;
 
-    @SerializedName("Profile")
+    @SerializedName("profile")
+    @XmlElement(name = "universityProfile")
     private StudyProfile mainProfile;
 
     public University() {
@@ -27,50 +38,54 @@ public class University {
         return id;
     }
 
-    public void setId(String id) {
+    public University setId(String id) {
         this.id = id;
+        return this;
     }
 
     public String getFullName() {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
+    public University setFullName(String fullName) {
         this.fullName = fullName;
+        return this;
     }
 
     public String getShortName() {
         return shortName;
     }
 
-    public void setShortName(String shortName) {
+    public University setShortName(String shortName) {
         this.shortName = shortName;
+        return this;
     }
 
     public int getYearOfFoundation() {
         return yearOfFoundation;
     }
 
-    public void setYearOfFoundation(int yearOfFoundation) {
+    public University setYearOfFoundation(int yearOfFoundation) {
         this.yearOfFoundation = yearOfFoundation;
+        return this;
     }
 
     public StudyProfile getMainProfile() {
         return mainProfile;
     }
 
-    public void setMainProfile(StudyProfile mainProfile) {
+    public University setMainProfile(StudyProfile mainProfile) {
         this.mainProfile = mainProfile;
+        return this;
     }
 
     @Override
     public String toString() {
-        return "University{" +
-                "id='" + id + '\'' +
-                ", fullName='" + fullName + '\'' +
-                ", shortName='" + shortName + '\'' +
-                ", yearOfFoundation=" + yearOfFoundation +
-                ", mainProfile=" + mainProfile +
-                '}';
+        return String.format("id = %s, fullName = %s, shortName = %s, yearOfFoundation = %s, mainProfile = %s",
+                this.id,
+                this.fullName,
+                this.shortName,
+                this.yearOfFoundation,
+                this.mainProfile.getProfileName());
     }
 }

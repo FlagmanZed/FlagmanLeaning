@@ -1,14 +1,13 @@
 HEStud\Util\Utilitarian.class
 HEStud\Comparators\StudAvgExamScore.class
 HEStud\Comparators\UniverID.class
-HEStud\Util\JsonUtil$1.class
+HEStud\Models\MaxInfo.class
 HEStud\Comparators\UniverFullName.class
 HEStud\Comparators\StudUniversityID.class
 HEStud\Comparators\UniverMainProfile.class
 HEStud\Models\Statistics.class
 HEStud\Comparators\UniverYearOfFoundation.class
 HEStud\Comparators\UniverShortName.class
-HEStud\Util\JsonUtil$2.class
 HEStud\Comparators\StudFullName.class
 HEStud\Models\Student.class
 HEStud\Comparators\StudCurrentCourseNumber.class
@@ -21,6 +20,8 @@ HEStud\FileInstrument\FileReader.class
 HEStud\Main.class
 HEStud\Comparators\UniverComparator.class
 HEStud\Util\JsonUtil.class
+HEStud\FileInstrument\WriteJson.class
 HEStud\Comparators\StudComparator.class
 HEStud\Enums\StudyProfile.class
+HEStud\FileInstrument\WriteXml.class
 HEStud\Enums\StudEnum.class

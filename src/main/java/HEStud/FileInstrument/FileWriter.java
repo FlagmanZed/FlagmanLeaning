@@ -56,13 +56,13 @@ public class FileWriter {
         for (Statistics statistics : statisticsList) {
             Row dataRow = statisticsSheet.createRow(rowNumber++);
             Cell profileCell = dataRow.createCell(0);
-            profileCell.setCellValue(statistics.getLearningProfile().getProfileName());
+            profileCell.setCellValue(statistics.getProfile().getProfileName());
             Cell avgScoreCell = dataRow.createCell(1);
             avgScoreCell.setCellValue(statistics.getAvgExamScore());
             Cell numberOfStudentsCell = dataRow.createCell(2);
-            numberOfStudentsCell.setCellValue(statistics.getNumberOfStudentsByProfile());
+            numberOfStudentsCell.setCellValue(statistics.getNumberOfStudents());
             Cell numberOfUniversitiesCell = dataRow.createCell(3);
-            numberOfUniversitiesCell.setCellValue(statistics.getNumberOfUniversityByProfile());
+            numberOfUniversitiesCell.setCellValue(statistics.getNumberOfUniversities());
             Cell universitiesCell = dataRow.createCell(4);
             universitiesCell.setCellValue(statistics.getUniversityNames());
         }
