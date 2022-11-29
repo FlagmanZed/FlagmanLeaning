@@ -1,4 +1,4 @@
-package HEStud;
+package HEStud.Util;
 
 import HEStud.Enums.StudyProfile;
 import HEStud.Models.Statistics;

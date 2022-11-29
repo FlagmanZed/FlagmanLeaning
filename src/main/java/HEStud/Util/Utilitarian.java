@@ -1,4 +1,4 @@
-package HEStud;
+package HEStud.Util;
 
 import HEStud.Comparators.*;
 import HEStud.Enums.StudEnum;

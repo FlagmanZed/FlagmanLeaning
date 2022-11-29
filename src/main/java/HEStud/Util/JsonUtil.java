@@ -1,4 +1,4 @@
-package HEStud;
+package HEStud.Util;
 
 import HEStud.Models.Student;
 import HEStud.Models.University;

@@ -1,4 +1,4 @@
-package HEStud;
+package HEStud.FileInstrument;
 
 import HEStud.Models.Statistics;
 import org.apache.poi.ss.usermodel.Cell;
@@ -11,13 +11,20 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class FileWriter {
+
+    private static final Logger logger = Logger.getLogger(FileWriter.class.getName());
+
     private FileWriter() {
     }
 
-    public static void writeStatistics(List<Statistics> statisticsList,
-                                       String filePath) throws IOException {
+    public static void writeXlsStatistics(List<Statistics> statisticsList,
+                                          String filePath) {
+
+        logger.log(Level.INFO, "Excel writing started");
 
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet statisticsSheet = workbook.createSheet("Статистика");
@@ -60,8 +67,14 @@ public class FileWriter {
             universitiesCell.setCellValue(statistics.getUniversityNames());
         }
 
-        try (FileOutputStream outputStream = new FileOutputStream(filePath)) {
+        try {
+            FileOutputStream outputStream = new FileOutputStream(filePath);
             workbook.write(outputStream);
+        } catch (IOException e) {
+            logger.log(Level.SEVERE, "New excel file writing failed", e);
+            return;
         }
+
+        logger.log(Level.INFO, "Excel writing finished successfully");
     }
 }
